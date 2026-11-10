@@ -13,10 +13,10 @@ namespace TwistedSpace.Puzzles
     [RequireComponent(typeof(BoxCollider))]
     public sealed class PuzzleObservationVolume : MonoBehaviour
     {
-        [SerializeField, Tooltip("本物体唯一的 BoxCollider，必须勾选 Is Trigger。复合区域请使用多个子物体。")]
+        [SerializeField, Tooltip("This object's only BoxCollider; Is Trigger must be enabled. Use several child objects for compound areas.")]
         private BoxCollider triggerVolume;
 
-        [SerializeField, Tooltip("仅指定玩家头部碰撞体；可指定多个头部碰撞体，切勿加入手或道具。")]
+        [SerializeField, Tooltip("Assign only the player's head collider(s). Several head colliders are allowed; never add hands or props.")]
         private Collider[] playerHeadColliders = new Collider[0];
 
         private bool[] headOverlaps;

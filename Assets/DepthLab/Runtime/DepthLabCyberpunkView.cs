@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -57,13 +58,13 @@ namespace DepthLab
                     continue;
 
                 string details = record.completed
-                    ? $"用时 {record.seconds:0.##} 秒  /  错误 {record.mistakes}  /  提示 {record.hints}\n重试 {record.retries}  /  尝试 {record.attempts}"
-                    : $"未完成  /  尝试 {record.attempts}";
+                    ? Loc.F("用时 {0:0.##} 秒  /  错误 {1}  /  提示 {2}\n重试 {3}  /  尝试 {4}", record.seconds, record.mistakes, record.hints, record.retries, record.attempts)
+                    : Loc.F("未完成  /  尝试 {0}", record.attempts);
                 SetTextIfChanged(archiveDetails[i], details);
             }
 
-            SetTextIfChanged(researcherLabel, $"研究员  /  等级 {completed + 1}  /  经验 {completed * 100}");
-            SetTextIfChanged(progressLabel, $"已完成 {completed}/4  /  星星 {stars}/12");
+            SetTextIfChanged(researcherLabel, Loc.F("研究员  /  等级 {0}  /  经验 {1}", completed + 1, completed * 100));
+            SetTextIfChanged(progressLabel, Loc.F("已完成 {0}/4  /  星星 {1}/12", completed, stars));
             float fill = completed / 4f;
             if (experienceFill != null && experienceFill.fillAmount != fill)
                 experienceFill.fillAmount = fill;

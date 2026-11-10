@@ -21,28 +21,28 @@ namespace TwistedSpace.Puzzles
 
         [Header("Drag-and-drop setup")]
         [SerializeField] private Camera headCamera;
-        [SerializeField, Tooltip("其世界 forward 是要求的观看方向，不是注视点；不要放在头部层级下。")]
+        [SerializeField, Tooltip("Its world forward axis is the required viewing direction, not a look-at point. Do not parent it under the head.")]
         private Transform requiredLookDirection;
         [SerializeField] private PuzzleObservationVolume[] observationVolumes = new PuzzleObservationVolume[0];
         [SerializeField] private PerspectivePuzzleTarget[] targets = new PerspectivePuzzleTarget[0];
 
         [Header("Forgiving alignment")]
-        [SerializeField, Range(0.01f, 1f), Tooltip("所有目标公共交集 / 所有目标包围矩形；不是相对锚点的平均值。")]
+        [SerializeField, Range(0.01f, 1f), Tooltip("Shared intersection of all targets / bounding rectangle of all targets; not an average relative to an anchor.")]
         private float overlapThreshold = 0.65f;
         [SerializeField, Range(0f, 180f)] private float lookToleranceDegrees = 25f;
         [SerializeField, Min(0f)] private float stableHoldSeconds = 0.35f;
-        [SerializeField, Range(0.00001f, 0.1f), Tooltip("拒绝过小投影，单位为视口宽/高比例。")]
+        [SerializeField, Range(0.00001f, 0.1f), Tooltip("Rejects projections that are too small, in fractions of viewport width/height.")]
         private float minimumViewportSize = 0.002f;
 
         [Header("Progress and success")]
-        [SerializeField, Tooltip("可留空。必须属于 World Space Canvas，范围会设为 0..1。")]
+        [SerializeField, Tooltip("Optional. Must belong to a World Space Canvas; its range is set to 0..1.")]
         private Slider progressSlider;
         [SerializeField, Min(0f)] private float progressSmoothTime = 0.12f;
         [SerializeField, Min(0f)] private float successFadeSeconds = 0.45f;
         [SerializeField] private AnimationCurve successFadeCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
         [SerializeField] private ProgressEvent onProgressChanged = new ProgressEvent();
 
-        [SerializeField, Tooltip("成功只触发一次；调用 ResetPuzzle 后可再次触发。")]
+        [SerializeField, Tooltip("Success fires only once; it can fire again after ResetPuzzle is called.")]
         private UnityEvent onPuzzleSolved = new UnityEvent();
 
         /// <summary>Invoked once per solve; bind doors/audio in the Inspector or with AddListener.</summary>

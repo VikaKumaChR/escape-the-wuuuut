@@ -147,7 +147,7 @@ namespace DepthLab.Editor
             if (nova.app != app || nova.settings != app.settings || nova.dialogueCanvas.worldCamera != app.headCamera)
                 throw new InvalidOperationException("Nova scene reference overrides could not be serialized.");
             SaveOwnedAssets();
-            Debug.Log("诺娃已原位烘焙：原创低多边形模型、表情、双按钮和六种非语音音调。主场景未保存，由调用方保存。");
+            Debug.Log("Nova baked in place: original low-poly model, expressions, two buttons and six non-verbal tones. The main scene was not saved; the caller saves it.");
         }
 
         public static DepthLabNova BuildGuideModel(Transform root, TMP_FontAsset installedFont)

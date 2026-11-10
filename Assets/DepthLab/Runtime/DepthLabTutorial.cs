@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -18,8 +19,9 @@ namespace DepthLab
         public event Action Changed;
         public event Action Finished;
 
-        public string Instruction => Completed ? "操作练习已完成。" : Instructions[Mathf.Clamp(Step, 0, 6)];
+        public string Instruction => Completed ? Loc.T("操作练习已完成。") : Loc.T(Instructions[Mathf.Clamp(Step, 0, 6)]);
 
+        // Chinese source text doubles as localization keys (shown through Loc.T in Instruction).
         private static readonly string[] Instructions =
         {
             "1/7 环顾：桌面按住鼠标右键移动鼠标；VR 转头或侧倾。完成后点击“下一步”。\n本项目未安装 OpenXR / XR Management，未配置 XR 加载器；以下 VR 操作仅在另行配置并启用 XR 后适用。",

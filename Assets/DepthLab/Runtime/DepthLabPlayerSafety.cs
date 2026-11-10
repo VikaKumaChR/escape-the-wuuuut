@@ -82,7 +82,7 @@ namespace DepthLab
             }
             app.TeleportTo(safeFeet);
             fallingSpeed = 0f;
-            Debug.Log("玩家已返回最近安全位置。", this);
+            Debug.Log("Player returned to the nearest safe position.", this);
         }
     }
 }

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -30,14 +31,14 @@ namespace DepthLab
         private float mirrorYaw;
         private const float InitialMirrorYaw = -15f;
 
-        public override string Objective => solved ? "实验完成：沿地面指引穿过出口。" :
-            !CorrectLight ? "第一步：点击下方「+25°」，调整光源。" :
-            !rayHits ? "第二步：点击「镜面 −5°」，让反射光照到橙色接收球。" :
-            "第三步：保持不动，等接收球亮起青灯。";
-        public override string Hint => solved ? "3. 光学锁定成功。请步行穿过已开启的出口。" :
-            !CorrectLight ? "先点「+25°」。暂时不用调整镜面。" :
-            !rayHits ? "镜面当前 " + mirrorYaw.ToString("0") + "°。点击「镜面 −5°」调到 −60°；从 −15°开始需要点九次。" :
-            "已经对准，保持 1.5 秒即可完成。无需计算公式。";
+        public override string Objective => solved ? Loc.T("实验完成：沿地面指引穿过出口。") :
+            !CorrectLight ? Loc.T("第一步：点击下方「+25°」，调整光源。") :
+            !rayHits ? Loc.T("第二步：点击「镜面 −5°」，让反射光照到橙色接收球。") :
+            Loc.T("第三步：保持不动，等接收球亮起青灯。");
+        public override string Hint => solved ? Loc.T("3. 光学锁定成功。请步行穿过已开启的出口。") :
+            !CorrectLight ? Loc.T("先点「+25°」。暂时不用调整镜面。") :
+            !rayHits ? Loc.F("镜面当前 {0:0}°。点击「镜面 −5°」调到 −60°；从 −15°开始需要点九次。", mirrorYaw) :
+            Loc.T("已经对准，保持 1.5 秒即可完成。无需计算公式。");
         public override int Progress => solved ? 2 : CorrectLight ? 1 : 0;
         public override int Goal => 2;
         protected override bool PuzzleSolved => solved;
@@ -151,11 +152,11 @@ namespace DepthLab
             if (receiverRenderer != null)
                 receiverRenderer.sharedMaterial = solved || (rayHits && CorrectLight) ? receiverHitMaterial : receiverIdleMaterial;
             if (instrumentLabel != null)
-                instrumentLabel.text = $"光源 {lightYaw:+0;-0;0}°   /   镜面 {mirrorYaw:+0;-0;0}°\n" +
-                    (solved ? "3. 接收器已锁定 · 请步行穿过已开启的出口" :
-                    !CorrectLight ? "等待第一步：选择 +25° 光源" :
-                    !rayHits ? $"光源已就绪 · 镜面距离参考角度还有 {Mathf.Abs(Mathf.DeltaAngle(mirrorYaw, -60f)):0}°" :
-                    $"已对准接收球 · 正在确认 {stableSeconds:0.0} / {lockSeconds:0.0} 秒");
+                instrumentLabel.text = Loc.F("光源 {0:+0;-0;0}°   /   镜面 {1:+0;-0;0}°", lightYaw, mirrorYaw) + "\n" +
+                    (solved ? Loc.T("3. 接收器已锁定 · 请步行穿过已开启的出口") :
+                    !CorrectLight ? Loc.T("等待第一步：选择 +25° 光源") :
+                    !rayHits ? Loc.F("光源已就绪 · 镜面距离参考角度还有 {0:0}°", Mathf.Abs(Mathf.DeltaAngle(mirrorYaw, -60f))) :
+                    Loc.F("已对准接收球 · 正在确认 {0:0.0} / {1:0.0} 秒", stableSeconds, lockSeconds));
         }
     }
 }

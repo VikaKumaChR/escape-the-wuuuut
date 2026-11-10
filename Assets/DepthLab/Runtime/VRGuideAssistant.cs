@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -13,12 +14,12 @@ namespace DepthLab
         public Canvas speechCanvas;
         public TMP_Text speechText;
         public UnityEngine.UI.Button hintButton, talkButton;
-        private string Greeting => chapter == null || chapter.chapterIndex == 0 ? WelcomeText :
+        private string Greeting => chapter == null || chapter.chapterIndex == 0 ? Loc.T(WelcomeText) :
             chapter.chapterIndex == 1
-                ? "这次寻找藏在树后的路。先向左、再向右观察，让平台显形；然后按青色编号依次前进。" :
+                ? Loc.T("这次寻找藏在树后的路。先向左、再向右观察，让平台显形；然后按青色编号依次前进。") :
             chapter.chapterIndex == 2
-                ? "看前方的两个物体。先比较方块大小，再比较线段长度；在操作台选择答案。不要被背景骗了！"
-                : "先点光源「+25°」，再转动镜面，让光照到橙色接收球。对准后保持片刻，球就会亮起。";
+                ? Loc.T("看前方的两个物体。先比较方块大小，再比较线段长度；在操作台选择答案。不要被背景骗了！")
+                : Loc.T("先点光源「+25°」，再转动镜面，让光照到橙色接收球。对准后保持片刻，球就会亮起。");
 
         private const float IdleSeconds = 35f;
         private bool validationAttempted, configurationValid, initialized;
@@ -114,26 +115,26 @@ namespace DepthLab
             if (progressChanged || mistakesChanged || solved != observedSolved) RearmIdle();
             if (newlySolved)
             {
-                string next = chapter.chapterIndex == 0 ? "下一关，我们一起找藏在树后的路。" :
-                    chapter.chapterIndex == 1 ? "下一关，看看背景怎样骗过眼睛。" :
-                    chapter.chapterIndex == 2 ? "下一关，用镜面把光送到接收球。" : "四项实验完成，研究报告已准备好。";
-                nova.PresentExternal("做得很好！走过亮起的出口。" + next,
+                string next = chapter.chapterIndex == 0 ? Loc.T("下一关，我们一起找藏在树后的路。") :
+                    chapter.chapterIndex == 1 ? Loc.T("下一关，看看背景怎样骗过眼睛。") :
+                    chapter.chapterIndex == 2 ? Loc.T("下一关，用镜面把光送到接收球。") : Loc.T("四项实验完成，研究报告已准备好。");
+                nova.PresentExternal(Loc.F("做得很好！走过亮起的出口。{0}", next),
                     DepthLabNova.Emotion.Excited);
             }
             else if (!solved)
             {
                 if (progressChanged)
                     nova.PresentExternal(chapter.chapterIndex == 1
-                            ? $"到达 {progress:00} 号平台！继续选择下一个亮起的编号。"
-                            : chapter.chapterIndex == 0 ? $"放好了！已匹配 {progress}/{chapter.Goal}。继续观察剩余实体与线框的位置。"
-                            : chapter.chapterIndex == 2 ? "答对了！点击继续，完成下一项比较。"
-                            : "光源调好了！现在转动镜面，让反射光照向接收球。",
+                            ? Loc.F("到达 {0:00} 号平台！继续选择下一个亮起的编号。", progress)
+                            : chapter.chapterIndex == 0 ? Loc.F("放好了！已匹配 {0}/{1}。继续观察剩余实体与线框的位置。", progress, chapter.Goal)
+                            : chapter.chapterIndex == 2 ? Loc.T("答对了！点击继续，完成下一项比较。")
+                            : Loc.T("光源调好了！现在转动镜面，让反射光照向接收球。"),
                         progress > observedProgress ? DepthLabNova.Emotion.Happy : DepthLabNova.Emotion.Curious);
                 else if (mistakes > observedMistakes)
                     nova.PresentExternal(chapter.chapterIndex == 1
-                            ? "这块平台还不安全。找青色编号，按顺序前进。"
-                            : chapter.chapterIndex == 0 ? "没关系！掉下的物体可以重新抓取。先看形状，再从侧面观察前后距离。"
-                            : "别急，只比较目标本身。可以点提示，让我陪你找线索。",
+                            ? Loc.T("这块平台还不安全。找青色编号，按顺序前进。")
+                            : chapter.chapterIndex == 0 ? Loc.T("没关系！掉下的物体可以重新抓取。先看形状，再从侧面观察前后距离。")
+                            : Loc.T("别急，只比较目标本身。可以点提示，让我陪你找线索。"),
                         DepthLabNova.Emotion.Encouraging);
             }
 

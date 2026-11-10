@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -28,19 +29,19 @@ namespace DepthLab
             sfx.SetValueWithoutNotify(settings.sfx);
             speed.SetValueWithoutNotify(settings.moveSpeed);
             brightness.SetValueWithoutNotify(settings.brightness);
-            movementLabel.text = "VR 移动   /   " + (settings.moveMode == 0 ? "步进" : "连续");
-            turnLabel.text = "VR 转向   /   " + (settings.turnMode == 0 ? "分段" : "连续");
-            snapLabel.text = $"VR 分段转向角度   /   {settings.snapAngle:0}°";
-            qualityLabel.text = "画质   /   " + QualityLabel(settings.quality);
+            movementLabel.text = Loc.F("VR 移动   /   {0}", Loc.T(settings.moveMode == 0 ? "步进" : "连续"));
+            turnLabel.text = Loc.F("VR 转向   /   {0}", Loc.T(settings.turnMode == 0 ? "分段" : "连续"));
+            snapLabel.text = Loc.F("VR 分段转向角度   /   {0:0}°", settings.snapAngle);
+            qualityLabel.text = Loc.F("画质   /   {0}", QualityLabel(settings.quality));
             refreshing = false;
         }
         private static string QualityLabel(int index)
         {
             switch (QualitySettings.names[index])
             {
-                case "Mobile": return "移动设备";
-                case "PC": return "电脑";
-                default: return $"档位 {index + 1}";
+                case "Mobile": return Loc.T("移动设备");
+                case "PC": return Loc.T("电脑");
+                default: return Loc.F("档位 {0}", index + 1);
             }
         }
         public void ChangeValues(float unused)

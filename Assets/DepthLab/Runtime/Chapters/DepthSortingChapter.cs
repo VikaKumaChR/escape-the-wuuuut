@@ -1,4 +1,5 @@
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -14,9 +15,9 @@ namespace DepthLab
         private int placed;
         private string feedback;
 
-        public override string Objective => "1. 抓取蓝色立方体、紫色球体和青色三棱柱实体。\n2. 放入各自对应的线框目标。\n3. 全部匹配后，步行穿过已开启的出口。";
-        public override string Hint => PuzzleSolved ? "3. 三件实体均已匹配。请步行穿过已开启的出口。" :
-            string.IsNullOrEmpty(feedback) ? "1. 抓彩色实体，不抓线框：桌面按住鼠标左键，滚轮调远近；启用 XR 后可用 VR 控制器抓取、借助双眼视差判断深度。\n2. 在对应线框中心附近松手。线框是无碰撞的目标影像；彩色物体与底座是有碰撞的实体。" : feedback;
+        public override string Objective => Loc.T("1. 抓取蓝色立方体、紫色球体和青色三棱柱实体。\n2. 放入各自对应的线框目标。\n3. 全部匹配后，步行穿过已开启的出口。");
+        public override string Hint => PuzzleSolved ? Loc.T("3. 三件实体均已匹配。请步行穿过已开启的出口。") :
+            string.IsNullOrEmpty(feedback) ? Loc.T("1. 抓彩色实体，不抓线框：桌面按住鼠标左键，滚轮调远近；启用 XR 后可用 VR 控制器抓取、借助双眼视差判断深度。\n2. 在对应线框中心附近松手。线框是无碰撞的目标影像；彩色物体与底座是有碰撞的实体。") : Loc.T(feedback);
         public override int Progress => placed;
         public override int Goal => 3;
         protected override bool PuzzleSolved => placed == Goal;

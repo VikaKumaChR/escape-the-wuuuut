@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab.Tests
 {
@@ -17,10 +18,14 @@ namespace DepthLab.Tests
         };
 
         private readonly List<PreferenceSnapshot> snapshots = new List<PreferenceSnapshot>();
+        private GameLanguage previousLanguage;
 
         [SetUp]
         public void PreservePreferences()
         {
+            // Assertions use the original Chinese UI text; run in Chinese without touching the saved player choice.
+            previousLanguage = Loc.Current;
+            Loc.SetLanguage(GameLanguage.Chinese, persist: false);
             snapshots.Clear();
             for (int i = 0; i < 4; i++)
                 snapshots.Add(new PreferenceSnapshot(ProgressPrefix + i));
@@ -41,6 +46,7 @@ namespace DepthLab.Tests
                 snapshot.Restore();
             PlayerPrefs.Save();
             snapshots.Clear();
+            Loc.SetLanguage(previousLanguage, persist: false);
         }
 
         private sealed class PreferenceSnapshot

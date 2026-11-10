@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.UI;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -133,15 +134,15 @@ namespace DepthLab
 
             bool currentExitReady = current is LabChapter lab ? lab.ExitReady :
                 currentGoal > 0 && currentProgress >= currentGoal;
-            string currentObjective = current == null ? "观察目标，开始实验" :
-                currentExitReady ? "实验完成，沿地面导向穿过出口" :
-                app.ActiveChapter == 0 ? "把三个实体放进同色同形线框" : current.Objective;
+            string currentObjective = current == null ? Loc.T("观察目标，开始实验") :
+                currentExitReady ? Loc.T("实验完成，沿地面导向穿过出口") :
+                app.ActiveChapter == 0 ? Loc.T("把三个实体放进同色同形线框") : current.Objective;
             bool force = refreshLabels || chapterChanged;
             if (force && experimentLabel != null)
             {
                 string title = app.ActiveChapter >= 0 && app.ActiveChapter < DepthLabProgress.Titles.Length
-                    ? DepthLabProgress.Titles[app.ActiveChapter] : "科学实验";
-                experimentLabel.text = $"实验 {app.ActiveChapter + 1:00}  ·  {title}";
+                    ? Loc.T(DepthLabProgress.Titles[app.ActiveChapter]) : Loc.T("科学实验");
+                experimentLabel.text = Loc.F("实验 {0:00}  ·  {1}", app.ActiveChapter + 1, title);
             }
             if (force || objective != currentObjective)
             {
@@ -151,11 +152,11 @@ namespace DepthLab
             }
             if (force || progress != currentProgress || goal != currentGoal || exitReady != currentExitReady)
             {
-                if (progressLabel != null) progressLabel.text = $"进度  {currentProgress}/{currentGoal}";
+                if (progressLabel != null) progressLabel.text = Loc.F("进度  {0}/{1}", currentProgress, currentGoal);
                 if (stepLabel != null && !compactGuidance)
                     stepLabel.text = currentExitReady
-                        ? "目标已完成 · 步行前往出口"
-                        : app.ActiveChapter == 0 ? "抓取实体 → 对齐线框 → 松开归位" : "观察线索 · 按目标完成实验";
+                        ? Loc.T("目标已完成 · 步行前往出口")
+                        : app.ActiveChapter == 0 ? Loc.T("抓取实体 → 对齐线框 → 松开归位") : Loc.T("观察线索 · 按目标完成实验");
                 if (progressFill != null)
                     progressFill.anchorMax = new Vector2(currentGoal > 0
                         ? Mathf.Clamp01((float)currentProgress / currentGoal) : 0f, 1f);
@@ -163,23 +164,23 @@ namespace DepthLab
             int currentSecond = (int)app.ElapsedSeconds;
             if (force || second != currentSecond)
             {
-                if (timerLabel != null) timerLabel.text = $"用时  {DepthLabProgress.TimeLabel(app.ElapsedSeconds)}";
+                if (timerLabel != null) timerLabel.text = Loc.F("用时  {0}", DepthLabProgress.TimeLabel(app.ElapsedSeconds));
                 second = currentSecond;
             }
             if (force || mistakes != app.Mistakes)
             {
-                if (mistakesLabel != null) mistakesLabel.text = $"错误  {app.Mistakes}";
+                if (mistakesLabel != null) mistakesLabel.text = Loc.F("错误  {0}", app.Mistakes);
             }
             if (!force)
             {
-                if (app.Mistakes > mistakes) BeginFeedback(errorColor, "操作有误 · 调整后重试");
-                else if (app.Hints > hints) BeginFeedback(hintColor, "重要提示 · 请看下方");
-                else if (currentProgress > progress) BeginFeedback(correctColor, "正确 · 进度已更新");
+                if (app.Mistakes > mistakes) BeginFeedback(errorColor, Loc.T("操作有误 · 调整后重试"));
+                else if (app.Hints > hints) BeginFeedback(hintColor, Loc.T("重要提示 · 请看下方"));
+                else if (currentProgress > progress) BeginFeedback(correctColor, Loc.T("正确 · 进度已更新"));
             }
             if (controlsLabel != null && (force || modeChanged))
                 controlsLabel.text = xr
-                    ? "握持抓取 · 松开释放 · 射线点选 · 摇杆移动"
-                    : "左键按住抓取 / 松开释放 · 滚轮远近\n右键观察 · WASD 移动 · Esc 暂停";
+                    ? Loc.T("握持抓取 · 松开释放 · 射线点选 · 摇杆移动")
+                    : Loc.T("左键按住抓取 / 松开释放 · 滚轮远近\n右键观察 · WASD 移动 · Esc 暂停");
             // The app still owns both legacy text values; only their presentation changes.
             if (force && app.hudText != null && experimentLabel != null) app.hudText.enabled = false;
             if (!force && app.Hints > hints) hintUntil = Time.unscaledTime + 12f;

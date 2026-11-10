@@ -119,7 +119,7 @@ namespace DepthLab.Editor
                 EditorSceneManager.MarkSceneDirty(scene);
                 Undo.CollapseUndoOperations(undo);
             }
-            Debug.Log("第一章诺娃已就位：左侧悬浮机器人、中文气泡、真实事件反馈与评分提示。请由主流程补全字体并保存场景。", guide);
+            Debug.Log("Chapter 1 Nova is in place: floating robot on the left, speech bubble, live event feedback and scoring hints. Let the main flow complete the font and save the scene.", guide);
         }
 
         private static void BuildSpeech(VRGuideAssistant guide, Transform root, TMP_FontAsset font)

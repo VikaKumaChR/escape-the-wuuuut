@@ -15,7 +15,7 @@ namespace TwistedSpace.Puzzles
     {
         [SerializeField] private XRGrabInteractable grabInteractable;
         [SerializeField] private Rigidbody targetBody;
-        [SerializeField, Tooltip("包含目标外观的所有 Renderer；不同目标不可共享 Renderer。")]
+        [SerializeField, Tooltip("All renderers that make up this target's silhouette. Different targets must not share renderers.")]
         private Renderer[] targetRenderers = new Renderer[0];
         [SerializeField, ColorUsage(false, true)] private Color successEmission = new Color(0.3f, 1f, 0.6f);
         [SerializeField, Min(0f)] private float emissionStrength = 2f;

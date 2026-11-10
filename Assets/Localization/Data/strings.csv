@@ -1,0 +1,416 @@
+zh,en,ko,context
+1. 抓取蓝色立方体、紫色球体和青色三棱柱实体。\n2. 放入各自对应的线框目标。\n3. 全部匹配后，步行穿过已开启的出口。,"1. Grab the blue cube, violet sphere and cyan triangular prism.\n2. Drop each one into its matching wireframe target.\n3. When all three match, walk through the open exit.","1. 파란 정육면체, 보라색 구, 청록색 삼각기둥을 잡으세요.\n2. 각 물체를 같은 모양의 와이어프레임 목표에 넣으세요.\n3. 모두 맞추면 열린 출구로 걸어 나가세요.",DepthSortingChapter; ParallaxChamber.unity
+3. 三件实体均已匹配。请步行穿过已开启的出口。,3. All three objects match. Walk through the open exit.,3. 세 물체를 모두 맞췄습니다. 열린 출구로 걸어 나가세요.,DepthSortingChapter
+1. 抓彩色实体，不抓线框：桌面按住鼠标左键，滚轮调远近；启用 XR 后可用 VR 控制器抓取、借助双眼视差判断深度。\n2. 在对应线框中心附近松手。线框是无碰撞的目标影像；彩色物体与底座是有碰撞的实体。,"1. Grab the colored objects, not the wireframes. Desktop: hold the left mouse button and scroll to change depth. With XR enabled, grab with a VR controller and judge depth with binocular disparity.\n2. Release near the center of the matching wireframe. Wireframes are non-solid target holograms; the colored objects and their pedestals are solid.","1. 와이어프레임이 아니라 컬러 물체를 잡으세요. 데스크톱: 마우스 왼쪽 버튼을 누른 채 휠로 거리를 조절합니다. XR을 켜면 VR 컨트롤러로 잡고 양안 시차로 깊이를 판단할 수 있습니다.\n2. 맞는 와이어프레임의 중심 근처에서 놓으세요. 와이어프레임은 충돌이 없는 목표 홀로그램이고, 컬러 물체와 받침대는 충돌이 있는 실체입니다.",DepthSortingChapter; ParallaxChamber.unity
+2. 匹配成功！继续将剩余彩色实体放入对应线框。各目标的实际深度不同。,2. Match! Keep placing the remaining colored objects in their wireframes. Each target sits at a different depth.,2. 성공! 남은 컬러 물체도 맞는 와이어프레임에 넣으세요. 목표마다 실제 깊이가 다릅니다.,DepthSortingChapter
+形状不匹配。物体留在原处，请放进同形状的线框。,Wrong shape. The object stays where it is; put it in the wireframe with the same shape.,모양이 맞지 않습니다. 물체는 그 자리에 있으니 같은 모양의 와이어프레임에 넣으세요.,DepthSortingChapter
+尚未对准目标。物体会自然落下，可以在落点重新抓取。,Not aligned with a target yet. The object falls naturally; grab it again where it lands.,아직 목표에 맞지 않았습니다. 물체는 자연스럽게 떨어지니 떨어진 곳에서 다시 잡으세요.,DepthSortingChapter
+物体掉出地图，已回收到起始台。普通松手不会传送物体。,The object fell out of the room and was returned to its starting pedestal. Normal releases never teleport objects.,물체가 맵 밖으로 떨어져 시작 받침대로 돌아왔습니다. 평소처럼 놓을 때는 물체가 순간이동하지 않습니다.,DepthSortingChapter
+比较前方两个方块，在操作台选择「一样大」或「不一样」。,"Compare the two cubes ahead, then choose SAME SIZE or DIFFERENT on the console.",앞에 있는 두 정육면체를 비교한 뒤 조작대에서 [크기 같음] 또는 [다름]을 고르세요.,IllusionChapter; ParallaxChamber.unity
+只比较中间的线段，选择「一样长」或「不一样」。,"Compare only the middle line segments, then choose SAME LENGTH or DIFFERENT.",가운데 선분만 비교하고 [길이 같음] 또는 [다름]을 고르세요.,IllusionChapter
+走进亮起的出口，前往光影实验室。,Walk into the glowing exit to reach the light lab.,빛나는 출구로 걸어가 빛의 실험실로 이동하세요.,IllusionChapter
+答对了！点击「继续」，进入下一步。,Correct! Click CONTINUE for the next step.,정답입니다! [계속]을 눌러 다음 단계로 가세요.,IllusionChapter
+1. 比较立方体的实际大小并选择答案；别被背景汇聚线误导。,1. Compare the actual size of the cubes and choose an answer. Don't let the converging background lines fool you.,1. 정육면체의 실제 크기를 비교해 답을 고르세요. 배경의 수렴선에 속지 마세요.,IllusionChapter; ParallaxChamber.unity
+2. 比较中间的直线段并选择答案；不计两端的箭翼。,2. Compare the middle straight segments and choose an answer. Ignore the arrow fins at the ends.,2. 가운데 직선 구간을 비교해 답을 고르세요. 양 끝의 화살표 날개는 빼고 보세요.,IllusionChapter
+先阅读本题解释，再点击“继续”进入下一步。,"Read the explanation first, then click CONTINUE for the next step.",먼저 설명을 읽은 뒤 [계속]을 눌러 다음 단계로 가세요.,IllusionChapter
+3. 两项比较已完成。请步行穿过已开启的出口。,3. Both comparisons are done. Walk through the open exit.,3. 두 가지 비교를 마쳤습니다. 열린 출구로 걸어 나가세요.,IllusionChapter
+1. 两个立方体的实际大小相同，还是不同？请选择答案。,"1. Are the two cubes actually the same size, or different? Choose your answer.","1. 두 정육면체의 실제 크기는 같을까요, 다를까요? 답을 고르세요.",IllusionChapter
+2. 两条直线段等长，还是不等长？忽略两端箭翼，选择答案。,"2. Are the two straight segments the same length, or not? Ignore the arrow fins and choose your answer.","2. 두 직선 구간의 길이는 같을까요, 다를까요? 양 끝 화살표 날개는 무시하고 답을 고르세요.",IllusionChapter
+3. 比较完成：背景影响大小与长度的感知，几何形状并未改变。请步行穿过已开启的出口。,"3. Comparison complete: the background changed how you perceived size and length, but the geometry never changed. Walk through the open exit.",3. 비교 완료: 배경은 크기와 길이에 대한 지각을 바꿨지만 실제 도형은 변하지 않았습니다. 열린 출구로 걸어 나가세요.,IllusionChapter
+1. 再试一次：背景汇聚线让同样大的立方体看似不同；只比较立方体本身。,1. Try again: the converging background lines make identical cubes look different. Compare only the cubes themselves.,1. 다시 해 보세요: 배경의 수렴선 때문에 같은 크기의 정육면체가 달라 보입니다. 정육면체 자체만 비교하세요.,IllusionChapter
+2. 再试一次：箭翼影响长度感知；只比较中间的直线段，不计箭翼。,"2. Try again: the arrow fins distort how long the lines look. Compare only the middle segments, without the fins.",2. 다시 해 보세요: 화살표 날개가 길이 지각을 왜곡합니다. 날개는 빼고 가운데 직선 구간만 비교하세요.,IllusionChapter
+答对了：两个方块一样大！背景让它们看起来不同。\n点击「继续」比较线段。,Correct: the two cubes are the same size! The background made them look different.\nClick CONTINUE to compare the lines.,정답: 두 정육면체는 크기가 같습니다! 배경 때문에 달라 보였을 뿐이에요.\n[계속]을 눌러 선분을 비교하세요.,IllusionChapter
+答对了：中间的线段一样长！两端箭头改变了你的感觉。\n点击「继续」开启出口。,Correct: the middle segments are the same length! The arrowheads changed your impression.\nClick CONTINUE to open the exit.,정답: 가운데 선분은 길이가 같습니다! 양 끝 화살표가 느낌을 바꿨을 뿐이에요.\n[계속]을 눌러 출구를 여세요.,IllusionChapter
+走进亮起的出口，前往下一关。,Walk into the glowing exit to go to the next level.,빛나는 출구로 걸어가 다음 단계로 이동하세요.,ParallaxForestChapter
+点击亮起的 {0:00} 号平台，前往下一个落脚点。,Click the glowing platform {0:00} to move to the next foothold.,빛나는 {0:00}번 발판을 눌러 다음 발판으로 이동하세요.,ParallaxForestChapter
+保持原地，左右侧倾头部，让隐藏平台显形。,Stay in place and lean your head left and right to reveal the hidden platforms.,제자리에서 머리를 좌우로 기울여 숨은 발판을 드러내세요.,ParallaxForestChapter
+先点「向左观察」，再点「向右观察」，让隐藏平台显形。,"Click LOOK LEFT, then LOOK RIGHT, to reveal the hidden platforms.",[왼쪽 보기]를 누른 뒤 [오른쪽 보기]를 눌러 숨은 발판을 드러내세요.,ParallaxForestChapter; ParallaxChamber.unity
+2. 按顺序选择四个安全平台；选错会返回最近的检查点。\n3. 全部通过后，步行穿过已开启的出口。,"2. Select the four safe platforms in order; a wrong pick sends you back to the last checkpoint.\n3. After crossing them all, walk through the open exit.",2. 안전한 발판 네 개를 순서대로 고르세요. 잘못 고르면 가장 가까운 체크포인트로 돌아갑니다.\n3. 모두 건너면 열린 출구로 걸어 나가세요.,ParallaxForestChapter
+1. 桌面：点击“向左观察”并等视角停稳，再点“向右观察”并等视角停稳。\nVR（启用 XR 后）：保持原地，左右侧倾头部，不用移动或转向操作；转向、传送不计入观察距离。,"1. Desktop: click LOOK LEFT and wait for the view to settle, then click LOOK RIGHT and wait again.\nVR (once XR is enabled): stay in place and lean your head left and right without moving or turning; turning and teleporting do not count toward the viewing distance.","1. 데스크톱: [왼쪽 보기]를 누르고 시점이 멈출 때까지 기다린 뒤, [오른쪽 보기]를 누르고 다시 기다리세요.\nVR(XR 활성화 후): 이동이나 회전 없이 제자리에서 머리를 좌우로 기울이세요. 회전과 순간이동은 관찰 거리에 포함되지 않습니다.",ParallaxForestChapter; ParallaxChamber.unity
+3. 路径已通过，请步行穿过已开启的出口。,3. Path crossed. Walk through the open exit.,3. 경로를 통과했습니다. 열린 출구로 걸어 나가세요.,ParallaxForestChapter
+2. 路径已发现，请依次选择四个安全平台。,2. Path revealed. Select the four safe platforms in order.,2. 경로를 찾았습니다. 안전한 발판 네 개를 차례로 고르세요.,ParallaxForestChapter
+先点向左观察，等视角停稳,Click LOOK LEFT first and wait for the view to settle,먼저 [왼쪽 보기]를 누르고 시점이 멈출 때까지 기다리세요,ParallaxForestChapter
+再点向右观察，平台就会显形,Now click LOOK RIGHT and the platforms will appear,이제 [오른쪽 보기]를 누르면 발판이 나타납니다,ParallaxForestChapter
+实验完成：沿地面指引穿过出口。,Experiment complete: follow the floor guide through the exit.,실험 완료: 바닥 안내선을 따라 출구로 나가세요.,ReflectionChapter
+第一步：点击下方「+25°」，调整光源。,Step 1: click +25° below to set the light source.,1단계: 아래의 [+25°]를 눌러 광원을 조정하세요.,ReflectionChapter; ParallaxChamber.unity
+第二步：点击「镜面 −5°」，让反射光照到橙色接收球。,Step 2: click MIRROR −5° until the reflected beam hits the orange receiver sphere.,2단계: [거울 −5°]를 눌러 반사광이 주황색 수신 구체에 닿게 하세요.,ReflectionChapter
+第三步：保持不动，等接收球亮起青灯。,Step 3: hold still until the receiver sphere lights up cyan.,3단계: 수신 구체에 청록색 불이 켜질 때까지 그대로 기다리세요.,ReflectionChapter
+3. 光学锁定成功。请步行穿过已开启的出口。,3. Optical lock achieved. Walk through the open exit.,3. 광학 고정 성공. 열린 출구로 걸어 나가세요.,ReflectionChapter
+先点「+25°」。暂时不用调整镜面。,Click +25° first. You don't need to touch the mirror yet.,먼저 [+25°]를 누르세요. 아직 거울은 조정하지 않아도 됩니다.,ReflectionChapter; ParallaxChamber.unity
+镜面当前 {0:0}°。点击「镜面 −5°」调到 −60°；从 −15°开始需要点九次。,Mirror is at {0:0}°. Click MIRROR −5° until it reads −60° (nine clicks from −15°).,현재 거울 각도 {0:0}°. [거울 −5°]를 눌러 −60°로 맞추세요(−15°에서 아홉 번).,ReflectionChapter
+已经对准，保持 1.5 秒即可完成。无需计算公式。,Aligned. Hold for 1.5 seconds to finish. No formulas needed.,정렬되었습니다. 1.5초만 유지하면 완료됩니다. 계산은 필요 없어요.,ReflectionChapter
+光源 {0:+0;-0;0}°   /   镜面 {1:+0;-0;0}°,Light {0:+0;-0;0}°   /   Mirror {1:+0;-0;0}°,광원 {0:+0;-0;0}°   /   거울 {1:+0;-0;0}°,ReflectionChapter
+3. 接收器已锁定 · 请步行穿过已开启的出口,3. Receiver locked · Walk through the open exit,3. 수신기 고정됨 · 열린 출구로 걸어 나가세요,ReflectionChapter
+等待第一步：选择 +25° 光源,Waiting for step 1: set the light to +25°,1단계 대기 중: 광원을 +25°로 설정하세요,ReflectionChapter
+光源已就绪 · 镜面距离参考角度还有 {0:0}°,Light ready · Mirror is {0:0}° from the reference angle,광원 준비 완료 · 거울이 기준 각도에서 {0:0}° 벗어나 있습니다,ReflectionChapter
+已对准接收球 · 正在确认 {0:0.0} / {1:0.0} 秒,On the receiver · Confirming {0:0.0} / {1:0.0} s,수신 구체 정렬됨 · 확인 중 {0:0.0} / {1:0.0}초,ReflectionChapter
+离开实验室？\n已完成的章节成绩已保存。,Leave the lab?\nYour completed chapter results are saved.,실험실을 나갈까요?\n완료한 챕터 기록은 저장되어 있습니다.,DepthLabApp
+重置所有章节进度？\n仅清除深度实验室的成绩与解锁记录。\n音频与舒适度设置将保留。,Reset all chapter progress?\nOnly DepthLab results and unlocks are cleared.\nAudio and comfort settings are kept.,모든 챕터 진행 상황을 초기화할까요?\nDepthLab 기록과 잠금 해제 정보만 삭제됩니다.\n오디오와 편의 설정은 유지됩니다.,DepthLabApp
+{0}\n\n{1}\n\n预计用时    {2}\n\n{3},{0}\n\n{1}\n\nEstimated time    {2}\n\n{3},{0}\n\n{1}\n\n예상 소요 시간    {2}\n\n{3},DepthLabApp
+每次提示增加一次评分惩罚  /  可随时暂停,Each hint adds a score penalty  /  Pause any time,힌트를 쓸 때마다 점수가 깎입니다  /  언제든 일시정지 가능,DepthLabApp
+第 {0:00} 章已完成,Chapter {0:00} complete,챕터 {0:00} 완료,DepthLabApp
+{0}\n\n用时  {1}       错误  {2}\n提示  {3}       重试  {4}\n\n{5}\n\n最佳成绩已自动保存。,{0}\n\nTime  {1}       Mistakes  {2}\nHints  {3}       Retries  {4}\n\n{5}\n\nYour best result was saved automatically.,{0}\n\n소요 시간  {1}       실수  {2}\n힌트  {3}       재시도  {4}\n\n{5}\n\n최고 기록이 자동으로 저장되었습니다.,DepthLabApp
+已探索全部四个感知实验室,All four perception labs explored,네 개의 지각 실험실을 모두 탐험했습니다,DepthLabApp
+下一章已解锁,Next chapter unlocked,다음 챕터가 열렸습니다,DepthLabApp
+最终总结,FINAL SUMMARY,최종 요약,DepthLabApp
+下一章,NEXT CHAPTER,다음 챕터,DepthLabApp; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+实验室 {0:00}   {1}/{2}   |   {3}   |   错误 {4}   |   {5},Lab {0:00}   {1}/{2}   |   {3}   |   Mistakes {4}   |   {5},실험실 {0:00}   {1}/{2}   |   {3}   |   실수 {4}   |   {5},DepthLabApp
+操作练习  {0:00} / 07,Practice  {0:00} / 07,조작 연습  {0:00} / 07,DepthLabApp
+已检测到操作  /  可点击下一步,Action detected  /  You can click NEXT,동작이 감지되었습니다  /  [다음]을 누르세요,DepthLabApp
+请完成操作后继续,Do the action to continue,동작을 완료하면 계속할 수 있습니다,DepthLabApp
+已完成   {0},Completed   {0},완료   {0},DepthLabApp
+可以探索,Ready to explore,탐험 가능,DepthLabApp; editor DepthLabCyberpunkUpgrade
+未解锁,LOCKED,잠김,DepthLabApp; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+深度探索者,DEPTH EXPLORER,깊이 탐험가,DepthLabApp; ParallaxChamber.unity; editor DepthLabChineseLocalization
+探索进行中,Exploration in progress,탐험 진행 중,DepthLabApp
+实验室 {0}/4    星级 {1}/12    最佳成绩总用时 {2},Labs {0}/4    Stars {1}/12    Best total time {2},실험실 {0}/4    별 {1}/12    최고 기록 합계 {2},DepthLabApp
+用时 {0:0.##} 秒  /  错误 {1}  /  提示 {2}\n重试 {3}  /  尝试 {4},Time {0:0.##} s  /  Mistakes {1}  /  Hints {2}\nRetries {3}  /  Attempts {4},소요 {0:0.##}초  /  실수 {1}  /  힌트 {2}\n재시도 {3}  /  시도 {4},DepthLabCyberpunkView
+未完成  /  尝试 {0},Not completed  /  Attempts {0},미완료  /  시도 {0},DepthLabCyberpunkView
+研究员  /  等级 {0}  /  经验 {1},Researcher  /  Level {0}  /  XP {1},연구원  /  레벨 {0}  /  경험치 {1},DepthLabCyberpunkView
+已完成 {0}/4  /  星星 {1}/12,Completed {0}/4  /  Stars {1}/12,완료 {0}/4  /  별 {1}/12,DepthLabCyberpunkView
+出口未解锁,EXIT LOCKED,출구 잠김,DepthLabExitDoor; ParallaxChamber.unity; editor DepthLabChineseLocalization
+已暂停,PAUSED,일시정지됨,DepthLabExitDoor
+出口已开启,EXIT OPEN,출구 열림,DepthLabExitDoor
+正在开门,OPENING,문 여는 중,DepthLabExitDoor
+实验进度 {0} / {1}\n完成后门会自动打开,Experiment progress {0} / {1}\nThe door opens automatically when done,실험 진행도 {0} / {1}\n완료하면 문이 자동으로 열립니다,DepthLabExitDoor
+继续后穿过出口,"Resume, then walk through the exit",재개한 뒤 출구를 통과하세요,DepthLabExitDoor
+请稍候,Please wait,잠시 기다려 주세요,DepthLabExitDoor
+穿过门框 · 查看总结,Walk through the door · View summary,문을 통과하세요 · 요약 보기,DepthLabExitDoor
+穿过门框 · 自动进入下一章,Walk through the door · Next chapter starts automatically,문을 통과하세요 · 다음 챕터로 자동 이동,DepthLabExitDoor
+已开放 · 穿过入口开始实验,Open · Walk through the entrance to start,개방됨 · 입구를 통과하면 실험이 시작됩니다,DepthLabHallPortal
+未开放 · 请先完成上一项实验,Closed · Finish the previous experiment first,미개방 · 이전 실험을 먼저 완료하세요,DepthLabHallPortal
+观察目标，开始实验,Observe the target and start the experiment,목표를 관찰하고 실험을 시작하세요,DepthLabHudPresentation
+实验完成，沿地面导向穿过出口,Experiment complete. Follow the floor guide through the exit,실험 완료. 바닥 안내선을 따라 출구로 나가세요,DepthLabHudPresentation
+把三个实体放进同色同形线框,Put the three objects in the wireframes of the same color and shape,세 물체를 같은 색·같은 모양의 와이어프레임에 넣으세요,DepthLabHudPresentation; GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+科学实验,Science experiment,과학 실험,DepthLabHudPresentation
+实验 {0:00}  ·  {1},Experiment {0:00}  ·  {1},실험 {0:00}  ·  {1},DepthLabHudPresentation
+进度  {0}/{1},Progress  {0}/{1},진행도  {0}/{1},DepthLabHudPresentation
+目标已完成 · 步行前往出口,Goal complete · Walk to the exit,목표 완료 · 출구로 걸어가세요,DepthLabHudPresentation
+抓取实体 → 对齐线框 → 松开归位,Grab the object → Align it with the wireframe → Release to snap,물체 잡기 → 와이어프레임에 맞추기 → 놓아서 고정,DepthLabHudPresentation; GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+观察线索 · 按目标完成实验,Look for clues · Complete the experiment goal,단서를 관찰하세요 · 목표대로 실험을 완료하세요,DepthLabHudPresentation
+用时  {0},Time  {0},소요 시간  {0},DepthLabHudPresentation
+错误  {0},Mistakes  {0},실수  {0},DepthLabHudPresentation
+操作有误 · 调整后重试,Not quite · Adjust and try again,잘못된 조작 · 조정 후 다시 시도하세요,DepthLabHudPresentation
+重要提示 · 请看下方,Hint · See below,중요 힌트 · 아래를 확인하세요,DepthLabHudPresentation
+正确 · 进度已更新,Correct · Progress updated,정답 · 진행도 업데이트됨,DepthLabHudPresentation
+握持抓取 · 松开释放 · 射线点选 · 摇杆移动,Grip to grab · Release to drop · Ray to select · Stick to move,그립으로 잡기 · 놓아서 내려놓기 · 레이로 선택 · 스틱으로 이동,DepthLabHudPresentation
+左键按住抓取 / 松开释放 · 滚轮远近\n右键观察 · WASD 移动 · Esc 暂停,Hold LMB to grab / release to drop · Scroll for depth\nRMB to look · WASD to move · Esc to pause · L language,왼쪽 클릭 유지로 잡기 / 떼서 놓기 · 휠로 거리 조절\n오른쪽 클릭으로 시점 · WASD 이동 · Esc 일시정지 · L 언어,DepthLabHudPresentation; GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+欢迎来到{0}。先观察目标，再动手验证。,"Welcome to the {0}. Observe the target first, then test it with your hands.","{0}에 온 걸 환영해요. 먼저 목표를 관찰하고, 직접 확인해 보세요.",DepthLabNova
+欢迎，我是诺娃。沿青色标记前往第一实验室，也可以向我了解操作方法。,"Welcome, I'm Nova. Follow the cyan markers to the first lab, or ask me how the controls work.","환영해요, 저는 노바예요. 청록색 표시를 따라 첫 번째 실험실로 가거나, 조작 방법을 저에게 물어보세요.",DepthLabNova
+实验完成！出口正在打开，我们继续下一项研究。,Experiment complete! The exit is opening. On to the next study.,실험 완료! 출구가 열리고 있어요. 다음 연구로 넘어가요.,DepthLabNova
+做得很好，观察结果已经记录。继续下一个目标。,"Nice work, your observation is recorded. On to the next goal.","잘했어요, 관찰 결과가 기록됐어요. 다음 목표로 가요.",DepthLabNova
+没关系，错误也是线索。换一个角度观察，我会陪你继续尝试。,"That's okay, mistakes are clues too. Try another angle; I'll stay with you.","괜찮아요, 실수도 단서예요. 다른 각도에서 관찰해 봐요. 제가 계속 함께할게요.",DepthLabNova
+可以走到侧面观察前后距离。需要具体帮助时，点击请求提示。,"Walk to the side to judge front-to-back distance. If you need specific help, ask for a hint.",옆으로 걸어가 앞뒤 거리를 관찰해 보세요. 구체적인 도움이 필요하면 힌트를 요청하세요.,DepthLabNova
+这里研究双眼视差、运动视差、视觉错觉和光线。你可以自由探索大厅，或从操作教程开始。,"Here we study binocular disparity, motion parallax, visual illusions and light. Explore the hall freely, or start with the tutorial.","이곳에서는 양안 시차, 운동 시차, 착시, 빛을 연구해요. 홀을 자유롭게 둘러보거나 조작 튜토리얼부터 시작하세요.",DepthLabNova
+立体视差之室,Stereo Room,시차의 방,DepthLabProgress; ParallaxChamber.unity; editor DepthLabCyberpunkUpgrade
+运动视差森林,Parallax Forest,패럴랙스 숲,DepthLabProgress; ParallaxChamber.unity
+视觉错觉回廊,Illusion Corridor,착시의 회랑,DepthLabProgress; ParallaxChamber.unity
+光影迷宫,Light Maze,빛의 미로,DepthLabProgress; ParallaxChamber.unity
+双眼视差,Binocular disparity,양안 시차,DepthLabProgress
+运动视差,Motion parallax,운동 시차,DepthLabProgress
+大小与长度错觉,Size and length illusions,크기·길이 착시,DepthLabProgress
+光线与材质,Light and materials,빛과 재질,DepthLabProgress
+1. 抓取三种彩色实体，放入不同深度的对应线框目标；线框非实体、无碰撞。\n2. 全部匹配后，步行穿过已开启的出口。\n双眼视差帮助判断深度；桌面预览不呈现双眼立体视觉。,"1. Grab the three colored objects and drop them into the matching wireframe targets at different depths. Wireframes are not solid and have no collision.\n2. When all three match, walk through the open exit.\nBinocular disparity helps you judge depth; the desktop preview cannot show stereo vision.",1. 세 가지 컬러 물체를 잡아 서로 다른 깊이에 있는 맞는 와이어프레임 목표에 넣으세요. 와이어프레임은 실체가 아니며 충돌이 없습니다.\n2. 모두 맞추면 열린 출구로 걸어 나가세요.\n양안 시차는 깊이 판단을 돕습니다. 데스크톱 미리보기에서는 입체시가 표현되지 않습니다.,DepthLabProgress
+1. 左右观察，发现隐藏路径。\n2. 依次选择四个安全平台。\n3. 步行穿过已开启的出口。,1. Look left and right to find the hidden path.\n2. Select the four safe platforms in order.\n3. Walk through the open exit.,1. 좌우로 관찰해 숨은 경로를 찾으세요.\n2. 안전한 발판 네 개를 차례로 고르세요.\n3. 열린 출구로 걸어 나가세요.,DepthLabProgress
+1. 比较立方体大小，阅读解释并继续。\n2. 比较直线段长度，阅读解释并继续。\n3. 步行穿过已开启的出口。,"1. Compare the cube sizes, read the explanation and continue.\n2. Compare the line lengths, read the explanation and continue.\n3. Walk through the open exit.",1. 정육면체 크기를 비교하고 설명을 읽은 뒤 계속하세요.\n2. 직선 길이를 비교하고 설명을 읽은 뒤 계속하세요.\n3. 열린 출구로 걸어 나가세요.,DepthLabProgress
+1. 比较金属与粗糙表面，将光源设为 +25°。\n2. 转动镜面，让接收器持续亮绿灯 1.5 秒。\n3. 步行穿过已开启的出口。,"1. Compare the metal and rough surfaces, and set the light to +25°.\n2. Rotate the mirror until the receiver stays green for 1.5 seconds.\n3. Walk through the open exit.",1. 금속 표면과 거친 표면을 비교하고 광원을 +25°로 설정하세요.\n2. 거울을 돌려 수신기에 초록불이 1.5초 동안 켜져 있게 하세요.\n3. 열린 출구로 걸어 나가세요.,DepthLabProgress
+3–5 分钟,3–5 min,3–5분,DepthLabProgress
+2–4 分钟,2–4 min,2–4분,DepthLabProgress
+3–6 分钟,3–6 min,3–6분,DepthLabProgress
+未解锁  /  请先完成上一章,LOCKED  /  COMPLETE THE PREVIOUS CHAPTER,잠김  /  이전 챕터를 먼저 완료하세요,DepthLabProgress; ParallaxChamber.unity; editor DepthLabChineseLocalization
+{0}   最佳成绩 {1}   /   错误 {2} 次,{0}   Best {1}   /   Mistakes {2},{0}   최고 기록 {1}   /   실수 {2}회,DepthLabProgress
+已解锁  /  尚未探索,UNLOCKED  /  NOT YET EXPLORED,잠금 해제  /  아직 탐험 전,DepthLabProgress; ParallaxChamber.unity; editor DepthLabChineseLocalization
+VR 移动   /   {0},VR MOVEMENT   /   {0},VR 이동   /   {0},DepthLabSettingsView
+步进,STEPPED,단계 이동,DepthLabSettingsView
+连续,SMOOTH,연속,DepthLabSettingsView
+VR 转向   /   {0},VR TURN   /   {0},VR 회전   /   {0},DepthLabSettingsView
+分段,SNAP,스냅,DepthLabSettingsView
+VR 分段转向角度   /   {0:0}°,VR SNAP ANGLE   /   {0:0}°,VR 스냅 회전 각도   /   {0:0}°,DepthLabSettingsView
+画质   /   {0},QUALITY   /   {0},화질   /   {0},DepthLabSettingsView
+移动设备,MOBILE,모바일,DepthLabSettingsView
+电脑,PC,PC,DepthLabSettingsView
+档位 {0},LEVEL {0},단계 {0},DepthLabSettingsView
+操作练习已完成。,Practice complete.,조작 연습을 완료했습니다.,DepthLabTutorial
+1/7 环顾：桌面按住鼠标右键移动鼠标；VR 转头或侧倾。完成后点击“下一步”。\n本项目未安装 OpenXR / XR Management，未配置 XR 加载器；以下 VR 操作仅在另行配置并启用 XR 后适用。,"1/7 Look around: on desktop, hold the right mouse button and move the mouse; in VR, turn or tilt your head. Then click NEXT.\nThis project does not include OpenXR / XR Management and has no XR loader configured; the VR controls below only apply once XR is set up and enabled.","1/7 둘러보기: 데스크톱에서는 마우스 오른쪽 버튼을 누른 채 마우스를 움직이고, VR에서는 머리를 돌리거나 기울이세요. 완료하면 [다음]을 누르세요.\n이 프로젝트에는 OpenXR / XR Management가 설치되어 있지 않고 XR 로더도 설정되지 않았습니다. 아래 VR 조작은 XR을 별도로 설정해 활성화한 경우에만 적용됩니다.",DepthLabTutorial
+2/7 调整朝向：桌面按住鼠标右键移动鼠标；VR 移动或转动控制器。完成后点击“下一步”。,"2/7 Change direction: on desktop, hold the right mouse button and move the mouse; in VR, move or rotate a controller. Then click NEXT.","2/7 방향 바꾸기: 데스크톱에서는 마우스 오른쪽 버튼을 누른 채 마우스를 움직이고, VR에서는 컨트롤러를 움직이거나 돌리세요. 완료하면 [다음]을 누르세요.",DepthLabTutorial
+3/7 指向按钮：桌面将鼠标悬停在可用按钮上；VR 用界面射线指向可用按钮。完成后点击“下一步”。,"3/7 Point at a button: on desktop, hover the mouse over an active button; in VR, point the UI ray at one. Then click NEXT.","3/7 버튼 가리키기: 데스크톱에서는 사용 가능한 버튼 위에 마우스를 올리고, VR에서는 UI 레이로 버튼을 가리키세요. 완료하면 [다음]을 누르세요.",DepthLabTutorial
+4/7 抓取彩色实体：桌面在练习物体上按住鼠标左键，滚轮调远近；VR 用控制器抓取。完成后点击“下一步”。\n彩色物体是可抓取实体；线框仅标示目标，不是实体，不能抓取。,"4/7 Grab a colored object: on desktop, hold the left mouse button on the practice object and scroll to change depth; in VR, grab it with a controller. Then click NEXT.\nColored objects are solid and grabbable; wireframes only mark targets and cannot be grabbed.","4/7 컬러 물체 잡기: 데스크톱에서는 연습 물체 위에서 마우스 왼쪽 버튼을 누른 채 휠로 거리를 조절하고, VR에서는 컨트롤러로 잡으세요. 완료하면 [다음]을 누르세요.\n컬러 물체는 잡을 수 있는 실체이고, 와이어프레임은 목표 표시일 뿐이라 잡을 수 없습니다.",DepthLabTutorial
+5/7 放入目标：将彩色实体移至距线框中心不足 35 厘米处再松手；桌面松开鼠标左键。完成后点击“下一步”。\n线框是无碰撞的目标影像，不会托住物体；彩色物体与底座是有碰撞的实体。,"5/7 Place it: move the colored object within 35 cm of the wireframe's center, then let go (on desktop, release the left mouse button). Then click NEXT.\nWireframes are non-solid target holograms and won't hold objects up; colored objects and pedestals are solid.",5/7 목표에 넣기: 컬러 물체를 와이어프레임 중심에서 35cm 이내로 옮긴 뒤 놓으세요(데스크톱: 마우스 왼쪽 버튼 떼기). 완료하면 [다음]을 누르세요.\n와이어프레임은 충돌이 없는 목표 홀로그램이라 물체를 받쳐 주지 않습니다. 컬러 물체와 받침대는 충돌이 있는 실체입니다.,DepthLabTutorial
+6/7 移动超过 30 厘米，原地转向不算。桌面：WASD 连续移动，Q/E 连续转向；VR：左摇杆移动，右摇杆转向，模式由设置决定。完成后点击“下一步”。\nEsc 或 VR 左手菜单键可暂停。,"6/7 Move more than 30 cm (turning in place doesn't count). Desktop: WASD to move, Q/E to turn. VR: left stick to move, right stick to turn, as set in Settings. Then click NEXT.\nPress Esc or the VR left-hand menu button to pause.","6/7 30cm 이상 이동하세요(제자리 회전은 포함되지 않음). 데스크톱: WASD로 이동, Q/E로 회전. VR: 왼쪽 스틱으로 이동, 오른쪽 스틱으로 회전하며 방식은 설정을 따릅니다. 완료하면 [다음]을 누르세요.\nEsc 또는 VR 왼손 메뉴 버튼으로 일시정지할 수 있습니다.",DepthLabTutorial
+7/7 查看提示：先点击“提示”，再点击“下一步”完成练习。,"7/7 Check a hint: click HINT, then click NEXT to finish the practice.",7/7 힌트 보기: [힌트]를 누른 뒤 [다음]을 눌러 연습을 마치세요.,DepthLabTutorial
+我是诺娃！抓起彩色实体，放进同色、同形的线框。\n从侧面看前后距离，对准后松手。三个都放好，出口自动打开。,"I'm Nova! Grab the colored objects and put each into the wireframe with the same color and shape.\nCheck the front-to-back distance from the side, then let go when aligned. Place all three and the exit opens.","저는 노바예요! 컬러 물체를 잡아 같은 색, 같은 모양의 와이어프레임에 넣어 주세요.\n옆에서 앞뒤 거리를 확인하고, 맞춰지면 놓으세요. 세 개를 모두 놓으면 출구가 자동으로 열려요.",VRGuideAssistant; CH1GuideAssistant.prefab
+这次寻找藏在树后的路。先向左、再向右观察，让平台显形；然后按青色编号依次前进。,"This time, find the path hidden behind the trees. Look left, then right, to reveal the platforms, then follow the cyan numbers in order.","이번에는 나무 뒤에 숨은 길을 찾아요. 왼쪽, 오른쪽 순서로 관찰해 발판을 드러낸 뒤 청록색 번호를 따라 차례로 나아가세요.",VRGuideAssistant
+看前方的两个物体。先比较方块大小，再比较线段长度；在操作台选择答案。不要被背景骗了！,"Look at the two objects ahead. Compare the cube sizes first, then the line lengths, and answer on the console. Don't let the background fool you!","앞에 있는 두 물체를 보세요. 먼저 정육면체 크기를, 다음에 선분 길이를 비교하고 조작대에서 답을 고르세요. 배경에 속지 마세요!",VRGuideAssistant
+先点光源「+25°」，再转动镜面，让光照到橙色接收球。对准后保持片刻，球就会亮起。,"First set the light to +25°, then rotate the mirror so the beam hits the orange receiver sphere. Hold it aligned for a moment and the sphere lights up.","먼저 광원을 [+25°]로 맞추고, 거울을 돌려 빛이 주황색 수신 구체에 닿게 하세요. 맞춘 상태로 잠시 기다리면 구체에 불이 켜져요.",VRGuideAssistant
+下一关，我们一起找藏在树后的路。,"Next, let's find the path hidden behind the trees.",다음 단계에서는 나무 뒤에 숨은 길을 함께 찾아요.,VRGuideAssistant
+下一关，看看背景怎样骗过眼睛。,"Next, let's see how backgrounds fool the eye.",다음 단계에서는 배경이 어떻게 눈을 속이는지 알아봐요.,VRGuideAssistant
+下一关，用镜面把光送到接收球。,"Next, use a mirror to send light to the receiver sphere.",다음 단계에서는 거울로 빛을 수신 구체까지 보내요.,VRGuideAssistant
+四项实验完成，研究报告已准备好。,All four experiments are done. Your research report is ready.,네 가지 실험을 모두 마쳤어요. 연구 보고서가 준비됐어요.,VRGuideAssistant
+做得很好！走过亮起的出口。{0},Great job! Walk through the glowing exit. {0},아주 잘했어요! 빛나는 출구로 걸어가세요. {0},VRGuideAssistant
+到达 {0:00} 号平台！继续选择下一个亮起的编号。,Platform {0:00} reached! Pick the next glowing number.,{0:00}번 발판 도착! 다음으로 빛나는 번호를 고르세요.,VRGuideAssistant
+放好了！已匹配 {0}/{1}。继续观察剩余实体与线框的位置。,Placed! {0}/{1} matched. Keep checking where the remaining objects and wireframes are.,잘 놓았어요! {0}/{1} 일치. 남은 물체와 와이어프레임의 위치를 계속 관찰하세요.,VRGuideAssistant
+答对了！点击继续，完成下一项比较。,Correct! Click CONTINUE for the next comparison.,정답이에요! [계속]을 눌러 다음 비교를 해 보세요.,VRGuideAssistant
+光源调好了！现在转动镜面，让反射光照向接收球。,Light set! Now rotate the mirror to aim the reflection at the receiver sphere.,광원 설정 완료! 이제 거울을 돌려 반사광이 수신 구체를 향하게 하세요.,VRGuideAssistant
+这块平台还不安全。找青色编号，按顺序前进。,That platform isn't safe yet. Find the cyan numbers and go in order.,그 발판은 아직 안전하지 않아요. 청록색 번호를 찾아 순서대로 나아가세요.,VRGuideAssistant
+没关系！掉下的物体可以重新抓取。先看形状，再从侧面观察前后距离。,"No problem! You can grab dropped objects again. Check the shape first, then judge the distance from the side.","괜찮아요! 떨어진 물체는 다시 잡을 수 있어요. 먼저 모양을 보고, 옆에서 앞뒤 거리를 관찰하세요.",VRGuideAssistant
+别急，只比较目标本身。可以点提示，让我陪你找线索。,Take your time and compare only the targets themselves. Click HINT and I'll help you find clues.,서두르지 마세요. 목표 자체만 비교하면 돼요. [힌트]를 누르면 제가 단서 찾기를 도와줄게요.,VRGuideAssistant
+鼠标点击进入 · 探索时启用 XR 模拟器,Click to enter · The XR simulator turns on while exploring,클릭해서 입장 · 탐험 중에는 XR 시뮬레이터가 켜집니다,OpeningMenuPresentation; editor DemoOpeningMenuUpgrade
+射线指向按钮 · 扳机按住 0.15 秒后松开,"Point the ray at a button · Hold the trigger 0.15 s, then release",레이로 버튼을 가리키세요 · 트리거를 0.15초 누른 뒤 놓으세요,OpeningMenuPresentation
+第一步：回到地面标记的观测区，面向三个几何框。,Step 1: go back to the observation zone marked on the floor and face the three frames.,1단계: 바닥에 표시된 관측 구역으로 돌아가 세 개의 기하 프레임을 바라보세요.,VerticalSliceFlow
+第二步：依次抓住框体并移动，让三个外轮廓在视野中重合。,Step 2: grab and move the frames one by one until their three outlines overlap in your view.,2단계: 프레임을 하나씩 잡아 옮겨 세 외곽선이 시야에서 겹치게 하세요.,VerticalSliceFlow
+第三步：微调物体和头部视角，看到对齐后保持视角，等待稳定进度完成。,"Step 3: fine-tune the objects and your head position. Once aligned, hold your view until the stability bar fills.",3단계: 물체와 머리 시점을 미세 조정하세요. 정렬되면 시점을 유지한 채 안정화 진행이 끝날 때까지 기다리세요.,VerticalSliceFlow
+挑战完成！\n用时：{0}分{1:00}秒\n使用提示：{2}次,Challenge complete!\nTime: {0} min {1:00} s\nHints used: {2},챌린지 완료!\n소요 시간: {0}분 {1:00}초\n사용한 힌트: {2}회,VerticalSliceFlow
+松开手柄以完成重置,Release the controller to finish resetting,컨트롤러를 놓으면 초기화가 완료됩니다,VerticalSliceFlow
+请进入观测区,Enter the observation zone,관측 구역으로 들어가세요,VerticalSliceFlow; ParallaxChamber.prefab; editor DemoUIBuilder
+保持视角,Hold your view,시점을 유지하세요,VerticalSliceFlow
+调整物体与视角,Adjust the objects and your view,물체와 시점을 조정하세요,VerticalSliceFlow
+对齐：{0}%　用时：{1}:{2:00},Alignment: {0}%   Time: {1}:{2:00},정렬: {0}%   시간: {1}:{2:00},VerticalSliceFlow
+长提示自动翻页 · 提示计入评分,Long hints page automatically · Hints affect your score,긴 힌트는 자동으로 넘어갑니다 · 힌트는 점수에 반영됩니다,CH1GuideAssistant.prefab; editor DepthLabGuideUpgrade
+提示（计入评分）,HINT (affects score),힌트 (점수 반영),CH1GuideAssistant.prefab; editor DepthLabGuideUpgrade
+诺娃 · 研究助手,Nova · Research Assistant,노바 · 연구 도우미,CH1GuideAssistant.prefab; editor DepthLabGuideUpgrade
+交流,TALK,대화,CH1GuideAssistant.prefab; editor DepthLabGuideUpgrade
+设置,SETTINGS,설정,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkHudUpgrade; editor DepthLabCyberpunkUpgrade; editor DepthLabPresentationUpgrade
+错误 · 待记录,Mistakes · Not recorded yet,실수 · 기록 대기,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+暂停,PAUSE,일시정지,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkHudUpgrade; editor DepthLabPresentationUpgrade
+提示,HINT,힌트,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkHudUpgrade; editor DepthLabCyberpunkUpgrade; editor DepthLabPresentationUpgrade
+用时 · 等待开始,Time · Waiting to start,시간 · 시작 대기,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+实验室 01,LAB 01,실험실 01,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+进度 · 等待开始,Progress · Waiting to start,진행도 · 시작 대기,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+实验 · 等待进入章节,Experiment · Waiting for a chapter,실험 · 챕터 입장 대기,GameplayHUD.prefab; ParallaxChamber.unity; editor DepthLabCyberpunkHudUpgrade
+重置进度,RESET PROGRESS,진행 초기화,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+总音量,MASTER,전체 음량,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+VR 移动   /   步进,VR MOVEMENT   /   STEPPED,VR 이동   /   단계 이동,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+调整体验设置,CALIBRATE YOUR EXPERIENCE,체험 설정 조정,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+舒适优先。VR 仅在配置并启用 XR 后可用；暂停时仍保留头部追踪。,Comfort first. VR works only once XR is configured and enabled; head tracking stays active while paused.,"편안함이 우선입니다. VR은 XR을 설정·활성화한 뒤에만 사용할 수 있으며, 일시정지 중에도 머리 추적은 유지됩니다.",SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+返回,BACK,뒤로,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+音乐,MUSIC,음악,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+恢复默认,DEFAULTS,기본값 복원,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+音效,SFX,효과음,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+桌面 WASD 连续移动，Q/E 连续转向。\nVR 模式设置不影响桌面。此版本没有暗角舒适遮罩。,Desktop: WASD moves and Q/E turns continuously.\nVR mode settings do not affect desktop play. This build has no comfort vignette.,"데스크톱: WASD로 연속 이동, Q/E로 연속 회전합니다.\nVR 모드 설정은 데스크톱에 영향을 주지 않습니다. 이 버전에는 비네트(시야 축소) 편의 기능이 없습니다.",SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+VR 分段转向角度   /   30°,VR SNAP ANGLE   /   30°,VR 스냅 회전 각도   /   30°,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+VR 转向   /   分段,VR TURN   /   SNAP,VR 회전   /   스냅,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+画质   /   电脑,QUALITY   /   PC,화질   /   PC,SettingsPanel.prefab; ParallaxChamber.unity
+移动速度   0.5 – 3 米/秒,MOVE SPEED   0.5 – 3 M/S,이동 속도   0.5 – 3 m/s,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+灯光亮度   50 – 150%,LIGHT BRIGHTNESS   50 – 150%,조명 밝기   50 – 150%,SettingsPanel.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization
+逃离扭曲空间,ESCAPE THE DISTORTED SPACE,왜곡된 공간 탈출,ParallaxChamber.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabInstaller; editor DemoUIBuilder
+握住框体并移动；回到地面标记处观察。,Grab a frame and move it; return to the floor marker to observe.,프레임을 잡아 옮긴 뒤 바닥 표시로 돌아가 관찰하세요.,ParallaxChamber.prefab; editor DemoUIBuilder
+重置谜题,RESET PUZZLE,퍼즐 초기화,ParallaxChamber.prefab; editor DemoUIBuilder
+返回主菜单,BACK TO MAIN MENU,메인 메뉴로 돌아가기,ParallaxChamber.prefab; editor DemoUIBuilder
+重置当前谜题？,Reset the current puzzle?,현재 퍼즐을 초기화할까요?,ParallaxChamber.prefab; editor DemoUIBuilder
+下一条提示,NEXT HINT,다음 힌트,ParallaxChamber.prefab; editor DemoUIBuilder
+空间回退,SPACE ROLLBACK,공간 되돌리기,ParallaxChamber.prefab; editor DemoUIBuilder
+出口已开启。,The exit is open.,출구가 열렸습니다.,ParallaxChamber.prefab; editor DemoUIBuilder
+模拟器操作,Simulator controls,시뮬레이터 조작,ParallaxChamber.prefab; editor DemoUIBuilder
+重新挑战,REPLAY,다시 도전,ParallaxChamber.prefab; ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DemoUIBuilder
+开始探索,START EXPLORING,탐험 시작,ParallaxChamber.prefab; editor DemoUIBuilder
+观测终端  /  01,OBSERVATION TERMINAL  /  01,관측 단말  /  01,ParallaxChamber.prefab; editor DemoUIBuilder
+观测完成  /  01,OBSERVATION COMPLETE  /  01,관측 완료  /  01,ParallaxChamber.prefab; editor DemoUIBuilder
+稳定确认,Stability check,안정화 확인,ParallaxChamber.prefab; editor DemoUIBuilder
+空间已稳定,Space stabilized,공간 안정화 완료,ParallaxChamber.prefab; editor DemoUIBuilder
+你的视角，是这个房间唯一可靠的坐标。,Your point of view is the only reliable coordinate in this room.,당신의 시점이 이 방에서 유일하게 믿을 수 있는 좌표입니다.,ParallaxChamber.prefab; editor DemoUIBuilder
+Tab  切换控制的设备\n按住右键  调整头部视角\nR  切换鼠标平移 / 旋转\nW A S D  平移所选设备\nQ / E  向下 / 向上\nG  握柄抓取 · 左键  扳机确认,Tab  Switch controlled device\nHold RMB  Adjust head view\nR  Toggle mouse translate / rotate\nW A S D  Move selected device\nQ / E  Down / Up\nG  Grip to grab · LMB  Trigger to confirm,Tab  조작할 장치 전환\n오른쪽 버튼 유지  머리 시점 조정\nR  마우스 이동 / 회전 전환\nW A S D  선택한 장치 이동\nQ / E  아래 / 위\nG  그립으로 잡기 · 왼쪽 버튼  트리거 확인,ParallaxChamber.prefab; editor DemoUIBuilder
+先点击 Game 窗口，再开始操作。\n详细绑定见 DEMO_GUIDE.txt。,"Click the Game window first, then start.\nSee DEMO_GUIDE.txt for all bindings.",먼저 Game 창을 클릭한 뒤 조작하세요.\n자세한 키 설정은 DEMO_GUIDE.txt를 참고하세요.,ParallaxChamber.prefab; editor DemoUIBuilder
+观察记录,Observation log,관찰 기록,ParallaxChamber.prefab; editor DemoUIBuilder
+对齐进度,Alignment,정렬 진행도,ParallaxChamber.prefab; editor DemoUIBuilder
+框体将恢复初始位置。\n如果仍握着物体，请松手后等待复位。,"The frames will return to their starting positions.\nIf you are still holding one, let go and wait for it to reset.",프레임이 처음 위치로 돌아갑니다.\n아직 물체를 잡고 있다면 놓은 뒤 복귀를 기다리세요.,ParallaxChamber.prefab; editor DemoUIBuilder
+继续解谜,KEEP SOLVING,퍼즐 계속하기,ParallaxChamber.prefab; editor DemoUIBuilder
+试玩关卡：视差观测室,Demo level: Parallax Observatory,체험 레벨: 시차 관측실,ParallaxChamber.prefab; editor DemoUIBuilder
+先按 Y 选择右手，用鼠标瞄准按钮。\n左键按住 0.15 秒后松开，确认选择。,"Press Y to select the right hand, then aim at a button with the mouse.\nHold the left button for 0.15 s and release to confirm.",Y를 눌러 오른손을 선택하고 마우스로 버튼을 조준하세요.\n왼쪽 버튼을 0.15초 누른 뒤 놓으면 선택이 확정됩니다.,ParallaxChamber.prefab; editor DemoUIBuilder
+确认重置,CONFIRM RESET,초기화 확인,ParallaxChamber.prefab; editor DemoUIBuilder
+03   /   视觉感知推断,03   /   PERCEPTUAL INFERENCE,03   /   지각 추론,ParallaxChamber.unity; editor DepthLabChineseLocalization
+测量真实\n质疑背景,MEASURE REALITY.\nQUESTION CONTEXT.,실제를 재고\n배경을 의심하라,ParallaxChamber.unity; editor DepthLabChineseLocalization
+使用出口  →,USE EXIT  →,출구 사용  →,ParallaxChamber.unity; editor DepthLabChineseLocalization
+选择下一项实验,SELECT YOUR NEXT EXPERIMENT,다음 실험 선택,ParallaxChamber.unity; editor DepthLabChineseLocalization
+章节选择,CHAPTER SELECT,챕터 선택,ParallaxChamber.unity; editor DepthLabChineseLocalization
+进入下一项尚未完成的实验，不会重置成绩。,Go to the next unfinished experiment. Your results are not reset.,아직 끝내지 않은 다음 실험으로 이동합니다. 기록은 초기화되지 않습니다.,ParallaxChamber.unity; editor DepthLabEntryUpgrade
+请确认,PLEASE CONFIRM,확인해 주세요,ParallaxChamber.unity; editor DepthLabChineseLocalization
+研究预览版   /   01.0\nVR 尚需配置与硬件验证,RESEARCH PREVIEW   /   01.0\nVR still needs setup and hardware testing,연구 프리뷰   /   01.0\nVR은 아직 설정과 기기 검증이 필요합니다,ParallaxChamber.unity; editor DepthLabChineseLocalization
+双眼视差帮助判断深度；桌面预览不呈现双眼立体视觉。\n抓取三种形状，放入不同深度的对应槽位。,Binocular disparity helps judge depth; the desktop preview cannot show stereo vision.\nGrab three shapes and place them in matching slots at different depths.,양안 시차는 깊이 판단을 돕습니다. 데스크톱 미리보기에서는 입체시가 표현되지 않습니다.\n세 가지 모양을 잡아 서로 다른 깊이의 맞는 슬롯에 넣으세요.,ParallaxChamber.unity
+距起点 5.2 米,5.2 m from start,시작점에서 5.2m,ParallaxChamber.unity
+02  /  运动视差   •   3–5 分钟,02  /  MOTION PARALLAX   •   3–5 MIN,02  /  운동 시차   •   3–5분,ParallaxChamber.unity
+完成章节后自动保存进度，并解锁下一间实验室。,Progress is saved on completion. Finish a lab to unlock the next.,챕터를 완료하면 진행 상황이 자동 저장되고 다음 실험실이 열립니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+实验进度 0 / 4\n完成后门会自动打开,Experiment progress 0 / 4\nThe door opens automatically when done,실험 진행도 0 / 4\n완료하면 문이 자동으로 열립니다,ParallaxChamber.unity
+04   光线与材质,04   LIGHT AND MATERIALS,04   빛과 재질,ParallaxChamber.unity
+01  抓取彩色实体形状\n02  对准同色同形的目标中心\n03  松开，匹配后自动吸附\n\n线框是目标全息影像，不是实体。\n彩色实体形状和底座应有碰撞。\n未匹配时，形状会落在原地，可再次抓取。\n\n桌面：左键按住抓取，滚轮调远近。\nVR（启用 XR 后）：握持键抓取，松开释放。,"01  Grab a colored shape\n02  Align it with the center of the target with the same color and shape\n03  Release; a match snaps into place\n\nWireframes are target holograms, not solid objects.\nColored shapes and pedestals have collision.\nIf it doesn't match, the shape drops where it is and can be grabbed again.\n\nDesktop: hold LMB to grab, scroll to change depth.\nVR (once XR is enabled): press grip to grab, release to drop.","01  컬러 도형 잡기\n02  같은 색·같은 모양 목표의 중심에 맞추기\n03  놓기 (일치하면 자동으로 붙음)\n\n와이어프레임은 목표 홀로그램이며 실체가 아닙니다.\n컬러 도형과 받침대에는 충돌이 있습니다.\n일치하지 않으면 도형은 그 자리에 떨어지며 다시 잡을 수 있습니다.\n\n데스크톱: 왼쪽 버튼 유지로 잡기, 휠로 거리 조절.\nVR(XR 활성화 후): 그립 버튼으로 잡고, 떼서 놓기.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+接收器,RECEIVER,수신기,ParallaxChamber.unity; editor DepthLabChineseLocalization
+返回实验室,BACK TO LAB,실험실로 돌아가기,ParallaxChamber.unity; editor DepthLabChineseLocalization
+取消,CANCEL,취소,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+计时、谜题交互与移动已暂停。\n界面仍可操作；启用 XR 后，头部追踪仍保持。,"Timer, puzzle interaction and movement are paused.\nThe UI still works; with XR enabled, head tracking stays active.","타이머, 퍼즐 조작, 이동이 일시정지되었습니다.\nUI는 계속 사용할 수 있으며, XR 활성화 시 머리 추적도 유지됩니다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+04   /   光学材质,04   /   OPTICAL MATERIALS,04   /   광학 재질,ParallaxChamber.unity; editor DepthLabChineseLocalization
+01  /  双眼视差   •   3–5 分钟,01  /  BINOCULAR DISPARITY   •   3–5 MIN,01  /  양안 시차   •   3–5분,ParallaxChamber.unity
+03  /  大小与长度错觉   •   2–4 分钟,03  /  SIZE & LENGTH ILLUSIONS   •   2–4 MIN,03  /  크기·길이 착시   •   2–4분,ParallaxChamber.unity
+蓝色立方体,BLUE CUBE,파란 정육면체,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabInteractionUpgrade
+不同,DIFFERENT,다름,ParallaxChamber.unity; editor DepthLabChineseLocalization
+03   大小与长度错觉,03   SIZE & LENGTH ILLUSIONS,03   크기·길이 착시,ParallaxChamber.unity
+近处枝叶移动得比远处更明显。\n桌面：依次点击下方左右观察按钮，\n每次等待视角停稳。\nVR（启用 XR 后）：原地轻轻侧倾。\n发现路径后，依次选择青色平台传送。,"Near foliage shifts more than distant foliage.\nDesktop: click the look-left and look-right buttons below,\nwaiting each time for the view to settle.\nVR (once XR is enabled): gently lean in place.\nOnce the path appears, select the cyan platforms in order to teleport.","가까운 나뭇잎이 먼 나뭇잎보다 더 크게 움직입니다.\n데스크톱: 아래의 왼쪽·오른쪽 보기 버튼을 차례로 누르고,\n매번 시점이 멈출 때까지 기다리세요.\nVR(XR 활성화 후): 제자리에서 살짝 몸을 기울이세요.\n경로가 보이면 청록색 발판을 차례로 골라 이동하세요.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+04  /  光线与材质   •   3–6 分钟,04  /  LIGHT AND MATERIALS   •   3–6 MIN,04  /  빛과 재질   •   3–6분,ParallaxChamber.unity
+确认后退出，已完成的成绩会保留。,Exit with confirmation. Completed results stay saved.,확인 후 종료합니다. 완료한 기록은 유지됩니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+进入实验室,ENTER LAB,실험실 입장,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+研究总结,RESEARCH SUMMARY,연구 요약,ParallaxChamber.unity; editor DepthLabChineseLocalization
+确认,CONFIRM,확인,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+三种形状\n三处深度,THREE SHAPES.\nTHREE DEPTHS.,세 가지 모양\n세 가지 깊이,ParallaxChamber.unity; editor DepthLabChineseLocalization
+桌面预览：左键点击／按住抓取，滚轮调远近；右键拖动视角；WASD 移动；Q/E 转向；Esc 暂停。VR 需另配 XR 加载器。,"Desktop preview: click / hold LMB to grab, scroll for depth; drag with RMB to look; WASD to move; Q/E to turn; Esc to pause; L to switch language. VR needs an XR loader set up separately.","데스크톱 미리보기: 왼쪽 클릭/유지로 잡기, 휠로 거리 조절, 오른쪽 드래그로 시점, WASD 이동, Q/E 회전, Esc 일시정지, L 언어 전환. VR은 XR 로더를 별도로 설정해야 합니다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+桌面预览   •   01.0,DESKTOP PREVIEW   •   01.0,데스크톱 미리보기   •   01.0,ParallaxChamber.unity; editor DepthLabChineseLocalization
+七步操作练习，完成动作后继续，也可随时跳过。,Seven action-gated practice steps. Skip at any time.,동작을 완료해야 넘어가는 7단계 조작 연습. 언제든 건너뛸 수 있습니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+透过表象\n探索感知,SEE BEYOND\nTHE OBVIOUS.,겉모습 너머\n지각을 탐험하라,ParallaxChamber.unity; editor DepthLabChineseLocalization
+深度\n实验室,DEPTH\nLAB,DEPTH\nLAB,ParallaxChamber.unity; editor DepthLabChineseLocalization
+逃离\n扭曲空间,ESCAPE THE\nDISTORTED SPACE,왜곡된 공간\n탈출,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DemoOpeningMenuUpgrade
+把反射光\n照到接收球上,AIM THE REFLECTION\nAT THE RECEIVER,반사광을\n수신 구체에 비추기,ParallaxChamber.unity; editor DepthLabEntryUpgrade
+跳过教程,SKIP TUTORIAL,튜토리얼 건너뛰기,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+哑光陶瓷\n金属度 0.00 / 粗糙度 0.76,MATTE CERAMIC\nM 0.00 / R 0.76,무광 세라믹\n금속성 0.00 / 거칠기 0.76,ParallaxChamber.unity; editor DepthLabChineseLocalization
+预览,PREVIEW,미리보기,ParallaxChamber.unity; editor DepthLabChineseLocalization
+此操作无法撤销。,This action cannot be undone.,이 작업은 되돌릴 수 없습니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+紫色球体,VIOLET SPHERE,보라색 구,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabInteractionUpgrade
+追随光线。\n比较金属与粗糙表面，将反射光束引向接收器。,"Follow the light.\nCompare metal and rough surfaces, and guide the reflected beam to the receiver.","빛을 따라가세요.\n금속 표면과 거친 표면을 비교하고, 반사된 빛줄기를 수신기로 이끄세요.",ParallaxChamber.unity
+查看制作信息、感知原理与版本说明。,"Project credits, perception concepts and build information.","제작 정보, 지각 원리, 버전 정보를 확인합니다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+镜面 +5°,MIRROR +5°,거울 +5°,ParallaxChamber.unity; editor DepthLabChineseLocalization
+距起点 6.8 米,6.8 m from start,시작점에서 6.8m,ParallaxChamber.unity
+前往 02 号平台,GO TO PLATFORM 02,02번 발판으로 이동,ParallaxChamber.unity
+继续已保存的进度,CONTINUE SAVED PROGRESS,저장된 진행 이어하기,ParallaxChamber.unity; editor DepthLabEntryUpgrade
+改变观察位置，发现新的线索。\n在层层交错的异星森林中找出隐藏路径。,Change your viewpoint to find new clues.\nUncover the hidden path through a layered alien forest.,관찰 위치를 바꿔 새로운 단서를 찾으세요.\n겹겹이 얽힌 외계 숲에서 숨은 경로를 찾아내세요.,ParallaxChamber.unity
+研究档案,YOUR RESEARCH ARCHIVE,연구 기록 보관함,ParallaxChamber.unity; editor DepthLabChineseLocalization
+比较物体本身，而不是周围背景,COMPARE THE OBJECTS — NOT THEIR SURROUNDINGS,주변 배경이 아니라 물체 자체를 비교하세요,ParallaxChamber.unity; editor DepthLabChineseLocalization
+重试本章,RETRY CHAPTER,이 챕터 재도전,ParallaxChamber.unity; editor DepthLabChineseLocalization
+抛光金属\n金属度 1.00 / 粗糙度 0.04,POLISHED METAL\nM 1.00 / R 0.04,연마된 금속\n금속성 1.00 / 거칠기 0.04,ParallaxChamber.unity; editor DepthLabChineseLocalization
+实验已暂停,EXPERIMENT PAUSED,실험 일시정지,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+继续  →,CONTINUE  →,계속  →,ParallaxChamber.unity; editor DepthLabChineseLocalization
+退出,EXIT,종료,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+近景 / 2.6 米,NEAR / 2.6 m,근경 / 2.6m,ParallaxChamber.unity; editor DepthLabChineseLocalization
+移动视点\n发现路径,MOVE YOUR HEAD.\nREVEAL THE PATH.,시점을 옮겨\n길을 찾아라,ParallaxChamber.unity; editor DepthLabChineseLocalization
+从第一项实验开始，保留已保存的成绩。,Start from the first experiment. Saved results are kept.,첫 번째 실험부터 시작합니다. 저장된 기록은 유지됩니다.,ParallaxChamber.unity; editor DepthLabEntryUpgrade
+选择实验室,CHOOSE YOUR LABORATORY,실험실 선택,ParallaxChamber.unity; editor DepthLabChineseLocalization
+DEPTHLAB  /  逃离扭曲空间\n\n使用 Unity 6000.6、URP、uGUI / TextMeshPro 与 XR Interaction Toolkit。\n原创几何场景、程序生成音效与实验室展示。\n内置 Noto Sans 字体遵循项目随附的 SIL 开源字体许可。\n\n四项感知研究：\n双眼视差 · 运动视差 · 庞佐与缪勒－莱尔错觉 · 反射与材质\n\n当前为桌面研究预览版，尚未安装 OpenXR 或 XR Management。\nVR 需另行配置 XR 加载器并进行真实设备验证。,"DEPTHLAB  /  ESCAPE THE DISTORTED SPACE\n\nBuilt with Unity 6000.6, URP, uGUI / TextMeshPro and the XR Interaction Toolkit.\nOriginal geometric scenes, procedurally generated audio and lab exhibits.\nThe bundled Noto Sans font is used under the SIL Open Font License included with the project.\n\nFour perception studies:\nBinocular disparity · Motion parallax · Ponzo and Müller-Lyer illusions · Reflection and materials\n\nThis is a desktop research preview; OpenXR and XR Management are not installed yet.\nVR needs a separately configured XR loader and testing on real hardware.","DEPTHLAB  /  왜곡된 공간 탈출\n\nUnity 6000.6, URP, uGUI / TextMeshPro, XR Interaction Toolkit으로 제작했습니다.\n오리지널 기하학 장면, 절차적으로 생성한 효과음, 실험실 전시물.\n내장 Noto Sans 폰트는 프로젝트에 포함된 SIL 오픈 폰트 라이선스를 따릅니다.\n\n네 가지 지각 연구:\n양안 시차 · 운동 시차 · 폰조 착시와 뮐러-라이어 착시 · 반사와 재질\n\n현재는 데스크톱 연구 프리뷰이며, OpenXR과 XR Management는 아직 설치되지 않았습니다.\nVR은 XR 로더를 별도로 설정하고 실제 기기에서 검증해야 합니다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+查看四个章节与已保存的最佳成绩。,Inspect all four chapters and your saved best runs.,네 챕터와 저장된 최고 기록을 확인합니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+感知，本身就是实验。,PERCEPTION IS AN EXPERIMENT.,"지각, 그 자체가 실험이다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+主菜单,MAIN MENU,메인 메뉴,ParallaxChamber.unity; editor DepthLabChineseLocalization
+返回章节选择,BACK TO CHAPTERS,챕터 선택으로,ParallaxChamber.unity; editor DepthLabChineseLocalization
+背景会改变感知。\n比较大小相同的物体与等长线段，理解视觉错觉。,Context changes perception.\nCompare same-size objects and equal-length lines to understand visual illusions.,배경은 지각을 바꿉니다.\n같은 크기의 물체와 같은 길이의 선분을 비교하며 착시를 이해하세요.,ParallaxChamber.unity
+深度实验室   /   感知研究,DEPTHLAB   /   PERCEPTION RESEARCH,DEPTHLAB   /   지각 연구,ParallaxChamber.unity; editor DepthLabChineseLocalization
+实验进度 0 / 2\n完成后门会自动打开,Experiment progress 0 / 2\nThe door opens automatically when done,실험 진행도 0 / 2\n완료하면 문이 자동으로 열립니다,ParallaxChamber.unity
+断开的平台\n请找青色编号,BROKEN PLATFORM\nFind the cyan numbers,끊어진 발판\n청록색 번호를 찾으세요,ParallaxChamber.unity; editor DepthLabPlayabilityPolish
+01   双眼视差,01   BINOCULAR DISPARITY,01   양안 시차,ParallaxChamber.unity
+前往 04 号平台,GO TO PLATFORM 04,04번 발판으로 이동,ParallaxChamber.unity
+练习物体在左侧\n\n抓取青色物体，\n在亮起的目标处松开。\n\n桌面：左键按住抓取，\n滚轮调整远近。\nVR：启用 XR 后用握持键。,"PRACTICE OBJECT\nON YOUR LEFT\n\nGrab the cyan object.\nRelease it at the lit target.\n\nDesktop: hold LMB to grab,\nscroll to change depth.\nVR: use grip once XR is enabled.","연습 물체는 왼쪽에\n\n청록색 물체를 잡아\n빛나는 목표에서 놓으세요.\n\n데스크톱: 왼쪽 버튼 유지로 잡기,\n휠로 거리 조절.\nVR: XR 활성화 후 그립 버튼 사용.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+前往 01 号平台,GO TO PLATFORM 01,01번 발판으로 이동,ParallaxChamber.unity
+操作练习 01 / 07,PRACTICE 01 / 07,조작 연습 01 / 07,ParallaxChamber.unity; editor DepthLabChineseLocalization
+两个立方体的实际大小相同，还是不同？,Are the two cubes equal in actual size?,"두 정육면체의 실제 크기는 같을까요, 다를까요?",ParallaxChamber.unity; editor DepthLabChineseLocalization
+先调光源，再用下方按钮转动镜面,"Set the light first, then turn the mirror with the buttons below","먼저 광원을 맞추고, 아래 버튼으로 거울을 돌리세요",ParallaxChamber.unity; editor DepthLabEntryUpgrade
+通过行动，了解感知,UNDERSTAND PERCEPTION THROUGH ACTION,행동으로 지각을 이해하라,ParallaxChamber.unity; editor DepthLabChineseLocalization
+长度相同,SAME LENGTH,길이 같음,ParallaxChamber.unity; editor DepthLabChineseLocalization
+粗糙金属\n金属度 1.00 / 粗糙度 0.84,ROUGH METAL\nM 1.00 / R 0.84,거친 금속\n금속성 1.00 / 거칠기 0.84,ParallaxChamber.unity; editor DepthLabChineseLocalization
+实验进度 0 / 3\n完成后门会自动打开,Experiment progress 0 / 3\nThe door opens automatically when done,실험 진행도 0 / 3\n완료하면 문이 자동으로 열립니다,ParallaxChamber.unity
+重新开始,PLAY AGAIN,처음부터 다시,ParallaxChamber.unity; editor DepthLabChineseLocalization
+可以开始探索,READY TO EXPLORE,탐험 준비 완료,ParallaxChamber.unity; editor DepthLabChineseLocalization
+定向光源 / 方位角,DIRECTIONAL LIGHT / AZIMUTH,방향광 / 방위각,ParallaxChamber.unity; editor DepthLabChineseLocalization
+距起点 3.6 米,3.6 m from start,시작점에서 3.6m,ParallaxChamber.unity
+02   运动视差,02   MOTION PARALLAX,02   운동 시차,ParallaxChamber.unity
+大小相同,SAME SIZE,크기 같음,ParallaxChamber.unity; editor DepthLabChineseLocalization
+继续,RESUME,계속,ParallaxChamber.unity; editor DepthLabChineseLocalization
+请先完成要求的动作。,Perform the requested action first.,먼저 요청된 동작을 완료하세요.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+01  /  立体视差之室,01  /  STEREO ROOM,01  /  시차의 방,ParallaxChamber.unity
+操作教程,TUTORIAL,조작 튜토리얼,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+中景 / 5.2 米,MID / 5.2 m,중경 / 5.2m,ParallaxChamber.unity; editor DepthLabChineseLocalization
+青色三棱柱,CYAN TRIANGULAR PRISM,청록색 삼각기둥,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabInteractionUpgrade
+制作信息,CREDITS,제작 정보,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+下一步,NEXT,다음,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
+光源 0°  /  镜面 −15°,LIGHT 0°  /  MIRROR −15°,광원 0°  /  거울 −15°,ParallaxChamber.unity; editor DepthLabChineseLocalization
+01   /   双眼视差实验室,01   /   BINOCULAR LAB,01   /   양안 시차 실험실,ParallaxChamber.unity; editor DepthLabChineseLocalization
+调整音量、舒适度、画质与亮度。,"Adjust audio, comfort, quality and brightness.","음량, 편의, 화질, 밝기를 조정합니다.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+先向左、再向右观察，寻找隐藏平台,"Look left, then right, to find the hidden platforms","왼쪽, 오른쪽 순서로 관찰해 숨은 발판을 찾으세요",ParallaxChamber.unity; editor DepthLabPlayabilityPolish
+镜面 −5°,MIRROR −5°,거울 −5°,ParallaxChamber.unity; editor DepthLabChineseLocalization
+深度实验室   /   沉浸式感知研究,DEPTHLAB   /   IMMERSIVE PERCEPTION RESEARCH,DEPTHLAB   /   몰입형 지각 연구,ParallaxChamber.unity; editor DepthLabChineseLocalization
+02   /   运动视差,02   /   MOTION PARALLAX,02   /   운동 시차,ParallaxChamber.unity; editor DepthLabChineseLocalization
+前往 03 号平台,GO TO PLATFORM 03,03번 발판으로 이동,ParallaxChamber.unity
+远景 / 7.9 米,FAR / 7.9 m,원경 / 7.9m,ParallaxChamber.unity; editor DepthLabChineseLocalization
+向左观察,LOOK LEFT,왼쪽 보기,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabPlayabilityPolish
+向右观察,LOOK RIGHT,오른쪽 보기,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabPlayabilityPolish
+四间实验室，\n探索不可靠的感知。\n\n了解深度、透视与光线\n如何影响眼前的世界。,"Four laboratories.\nOne unreliable reality.\n\nLearn how depth, perspective\nand light shape what you see.","네 개의 실험실,\n믿을 수 없는 지각을 탐험하라.\n\n깊이, 원근, 빛이\n눈앞의 세계를 어떻게 바꾸는지 알아보세요.",ParallaxChamber.unity; editor DepthLabChineseLocalization
+进入这个已解锁的章节。,Enter this unlocked chapter.,잠금 해제된 이 챕터에 들어갑니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
+从第一关开始,START FROM CHAPTER 1,첫 챕터부터 시작,ParallaxChamber.unity; editor DepthLabEntryUpgrade
+章节完成,CHAPTER COMPLETE,챕터 완료,editor DepthLabChineseLocalization
+先完成实验\n再使用此出口,SOLVE THE EXPERIMENT\nTHEN USE THIS EXIT,실험을 완료한 뒤\n이 출구를 사용하세요,editor DepthLabChineseLocalization
+请先完成本关任务\n完成后出口亮起,Finish this level's task first\nThe exit lights up when done,먼저 이 단계의 과제를 완료하세요\n완료하면 출구에 불이 켜집니다,editor DepthLabChineseLocalization
+DEPTHLAB   /   感知研究,DEPTHLAB   /   PERCEPTION RESEARCH,DEPTHLAB   /   지각 연구,editor DepthLabChineseLocalization
+DEPTHLAB   /   沉浸式感知研究,DEPTHLAB   /   IMMERSIVE PERCEPTION RESEARCH,DEPTHLAB   /   몰입형 지각 연구,editor DepthLabChineseLocalization
+开始游戏,START GAME,게임 시작,editor DepthLabChineseLocalization
+进入下一间已解锁的实验室。,Continue at your next unlocked laboratory.,다음으로 열린 실험실로 이동합니다.,editor DepthLabChineseLocalization
+画质   /   默认,QUALITY   /   DEFAULT,화질   /   기본,editor DepthLabChineseLocalization
+横向观察：0.00 / 0.22 米,Inspect sideways: 0.00 / 0.22 m,측면 관찰: 0.00 / 0.22m,editor DepthLabChineseLocalization
+?  /  未验证\n传送至此,?  /  UNVERIFIED\nLAND HERE,?  /  미확인\n여기로 이동,editor DepthLabChineseLocalization
+控制光线\n点亮接收器,CONTROL LIGHT.\nCLOSE THE CIRCUIT.,빛을 다루고\n수신기를 밝혀라,editor DepthLabChineseLocalization
+桌面：按钮微调；VR 启用后可抓取转镜,"Desktop: fine-tune with buttons; in VR, grab the mirror to turn it",데스크톱: 버튼으로 미세 조정 · VR: 거울을 잡고 돌리기,editor DepthLabChineseLocalization
+操作,ACTION,조작,editor DepthLabCyberpunkHudUpgrade
+用双眼视差判断距离，让实体与目标归位。,Judge distance with binocular disparity and return each object to its target.,양안 시차로 거리를 판단해 물체를 목표 위치로 돌려놓으세요.,editor DepthLabCyberpunkUpgrade
+移动观察位置，发现被遮挡的安全路径。,Move your viewpoint to find the hidden safe path.,관찰 위치를 옮겨 가려진 안전한 경로를 찾으세요.,editor DepthLabCyberpunkUpgrade
+比较大小与长度，拆解透视制造的错觉。,Compare size and length to take apart illusions made by perspective.,크기와 길이를 비교해 원근이 만든 착시를 풀어 보세요.,editor DepthLabCyberpunkUpgrade
+调整光源与镜面，追踪材质和反射的线索。,Adjust the light and mirror to follow clues in materials and reflections.,광원과 거울을 조정해 재질과 반사의 단서를 쫓으세요.,editor DepthLabCyberpunkUpgrade
+每完成一章，获得 100 经验,Earn 100 XP for each chapter you complete,챕터를 하나 완료할 때마다 경험치 100 획득,editor DepthLabCyberpunkUpgrade
+深度实验室  /  感知研究,DEPTHLAB  /  PERCEPTION RESEARCH,DEPTHLAB  /  지각 연구,editor DepthLabCyberpunkUpgrade
+感知实验  /  自由观察 · 逐章探索,Perception experiments  /  Free observation · Chapter by chapter,지각 실험  /  자유 관찰 · 챕터별 탐험,editor DepthLabCyberpunkUpgrade
+深度实验室,DEPTHLAB,DEPTHLAB,editor DepthLabCyberpunkUpgrade
+虚拟现实深度感知体验,A virtual reality depth-perception experience,가상현실 깊이 지각 체험,editor DepthLabCyberpunkUpgrade
+深入感知，重新认识现实。,Look deeper and see reality anew.,"지각을 깊이 탐구하고, 현실을 새롭게 바라보세요.",editor DepthLabCyberpunkUpgrade
+实验选择,EXPERIMENTS,실험 선택,editor DepthLabCyberpunkUpgrade
+研究记录,RESEARCH LOG,연구 기록,editor DepthLabCyberpunkUpgrade
+神经感知网络,NEURAL PERCEPTION NETWORK,신경 지각 네트워크,editor DepthLabCyberpunkUpgrade
+观察 · 空间 · 深度,OBSERVE · SPACE · DEPTH,관찰 · 공간 · 깊이,editor DepthLabCyberpunkUpgrade
+双眼视差  /  运动视差  /  视觉错觉  /  光影,BINOCULAR DISPARITY  /  MOTION PARALLAX  /  ILLUSIONS  /  LIGHT,양안 시차  /  운동 시차  /  착시  /  빛과 그림자,editor DepthLabCyberpunkUpgrade
+关于游戏,ABOUT THE GAME,게임 소개,editor DepthLabCyberpunkUpgrade
+穿过四间感知实验室，探索距离、\n透视与光线如何塑造眼前的世界。,"Pass through four perception labs and explore how distance,\nperspective and light shape the world in front of you.","네 개의 지각 실험실을 지나며 거리,\n원근, 빛이 눈앞의 세계를 어떻게 만드는지 탐험하세요.",editor DepthLabCyberpunkUpgrade
+完成章节后自动保存研究进度,Research progress is saved when you finish a chapter,챕터를 완료하면 연구 진행 상황이 자동 저장됩니다,editor DepthLabCyberpunkUpgrade
+选择你的感知实验,CHOOSE YOUR PERCEPTION EXPERIMENT,지각 실험을 선택하세요,editor DepthLabCyberpunkUpgrade
+完成前一章以解锁下一章；未解锁的实验仍可查看详情。,Finish a chapter to unlock the next; locked experiments can still be previewed.,이전 챕터를 완료하면 다음 챕터가 열립니다. 잠긴 실험도 상세 정보는 볼 수 있습니다.,editor DepthLabCyberpunkUpgrade
+返回首页,HOME,홈으로,editor DepthLabCyberpunkUpgrade
+重新探索,EXPLORE AGAIN,다시 탐험,editor DepthLabCyberpunkUpgrade
+实验全息预览,HOLOGRAPHIC PREVIEW,실험 홀로그램 미리보기,editor DepthLabCyberpunkUpgrade
+返回实验选择,BACK TO EXPERIMENTS,실험 선택으로,editor DepthLabCyberpunkUpgrade
+计时、实验交互与移动已暂停。\n头部追踪与界面操作保持可用。,"Timer, experiment interaction and movement are paused.\nHead tracking and the UI remain available.","타이머, 실험 조작, 이동이 일시정지되었습니다.\n머리 추적과 UI 조작은 계속 사용할 수 있습니다.",editor DepthLabCyberpunkUpgrade
+确认操作,CONFIRM ACTION,작업 확인,editor DepthLabCyberpunkUpgrade
+左侧操作练习\n\n抓取青色物体。\n在亮起的目标处松开。\n\n桌面抓取时，滚轮调整远近。,"PRACTICE ON YOUR LEFT\n\nGrab the cyan object.\nRelease it at the lit target.\n\nOn desktop, scroll while grabbing to change depth.",왼쪽 조작 연습\n\n청록색 물체를 잡으세요.\n빛나는 목표에서 놓으세요.\n\n데스크톱에서는 잡은 채 휠로 거리를 조절합니다.,editor DepthLabCyberpunkUpgrade
+体验设置,EXPERIENCE SETTINGS,체험 설정,editor DepthLabCyberpunkUpgrade
+按你的习惯调整声音、移动方式与画面。,"Adjust sound, movement and visuals to suit you.","소리, 이동 방식, 화면을 취향에 맞게 조정하세요.",editor DepthLabCyberpunkUpgrade
+移动速度  /  米每秒,MOVE SPEED  /  m/s,이동 속도  /  m/s,editor DepthLabCyberpunkUpgrade
+灯光亮度,LIGHT BRIGHTNESS,조명 밝기,editor DepthLabCyberpunkUpgrade
+桌面：WASD 移动，Q/E 转向。\n暂停时仍可调整设置。,"Desktop: WASD to move, Q/E to turn.\nSettings can be changed while paused.","데스크톱: WASD 이동, Q/E 회전.\n일시정지 중에도 설정을 바꿀 수 있습니다.",editor DepthLabCyberpunkUpgrade
+深度实验室 VR\n\n基于 Unity、uGUI、TextMeshPro 与 XR 交互工具包构建。\n原创建模、程序化声音、神经网络全息界面与线性图标。\n字体：Noto Sans SC，授权文件见项目内 OFL.txt。\n\n四项感知研究：双眼视差、运动视差、视觉错觉、光线与材质。\n\n开发与设备说明：桌面研究预览；VR 加载器配置与头显验证仍需完成。,"DEPTHLAB VR\n\nBuilt with Unity, uGUI, TextMeshPro and the XR Interaction Toolkit.\nOriginal models, procedural sound, a neural-network holographic UI and line icons.\nFont: Noto Sans SC; see OFL.txt in the project for the license.\n\nFour perception studies: binocular disparity, motion parallax, visual illusions, light and materials.\n\nDevelopment and device notes: desktop research preview; VR loader setup and headset testing are still to do.","DEPTHLAB VR\n\nUnity, uGUI, TextMeshPro, XR Interaction Toolkit으로 제작했습니다.\n오리지널 모델링, 절차적 사운드, 신경망 홀로그램 UI, 라인 아이콘.\n폰트: Noto Sans SC, 라이선스는 프로젝트 내 OFL.txt를 참고하세요.\n\n네 가지 지각 연구: 양안 시차, 운동 시차, 착시, 빛과 재질.\n\n개발 및 기기 참고: 데스크톱 연구 프리뷰이며, VR 로더 설정과 헤드셋 검증은 아직 남아 있습니다.",editor DepthLabCyberpunkUpgrade
+继续实验,RESUME EXPERIMENT,실험 계속,editor DepthLabCyberpunkUpgrade
+重试实验,RETRY EXPERIMENT,실험 재도전,editor DepthLabCyberpunkUpgrade
+查看详情,VIEW DETAILS,상세 보기,editor DepthLabCyberpunkUpgrade
+继续下一间已解锁的感知实验室。,Continue to the next unlocked perception lab.,다음으로 열린 지각 실험실로 이동합니다.,editor DepthLabCyberpunkUpgrade
+查看已保存的成绩、星级与研究进度。,"View saved results, stars and research progress.","저장된 기록, 별, 연구 진행 상황을 확인합니다.",editor DepthLabCyberpunkUpgrade
+确认后仅清除章节成绩与解锁记录，保留设置。,Clears only chapter results and unlocks after confirmation; settings are kept.,확인하면 챕터 기록과 잠금 해제 정보만 삭제되고 설정은 유지됩니다.,editor DepthLabCyberpunkUpgrade
+完成本步操作后继续。,Complete this step to continue.,이 단계의 동작을 완료하면 계속할 수 있습니다.,editor DepthLabCyberpunkUpgrade
+查看提示；实验中的提示会计入评分。,View a hint; hints during experiments count toward your score.,힌트를 봅니다. 실험 중 사용한 힌트는 점수에 반영됩니다.,editor DepthLabCyberpunkUpgrade
+确认后退出，已完成的研究记录会保留。,Exit after confirmation; completed research records are kept.,확인 후 종료합니다. 완료한 연구 기록은 유지됩니다.,editor DepthLabCyberpunkUpgrade
+已完成  ,Completed  ,완료  ,editor DepthLabCyberpunkUpgrade
+01  /  双眼视差,01  /  BINOCULAR DISPARITY,01  /  양안 시차,editor DepthLabCyberpunkUpgrade
+尚未探索,NOT YET EXPLORED,아직 탐험 전,editor DepthLabCyberpunkUpgrade
+感知实验  /  当前目标,Perception experiment  /  Current goal,지각 실험  /  현재 목표,editor DepthLabCyberpunkUpgrade
+观察环境，寻找深度线索。,Observe the room and look for depth cues.,주변을 관찰하며 깊이 단서를 찾으세요.,editor DepthLabCyberpunkUpgrade
+实验入口,EXPERIMENT ENTRANCE,실험 입구,editor DepthLabFacilityBuilder
+进入对应的视觉科学实验,Enter this vision-science experiment,해당 시각 과학 실험에 들어갑니다,editor DepthLabFacilityBuilder
+进入实验,ENTER EXPERIMENT,실험 입장,editor DepthLabFacilityBuilder
+感知研究中心,PERCEPTION RESEARCH CENTER,지각 연구 센터,editor DepthLabFacilityBuilder
+观察 · 判断 · 验证\n四项实验，探索视觉的边界。\n\n沿青色地面标记进入第一实验室。\n也可以与诺娃交流或打开操作教程。,Observe · Judge · Verify\nFour experiments at the edge of vision.\n\nFollow the cyan floor markers into the first lab.\nYou can also talk to Nova or open the tutorial.,관찰 · 판단 · 검증\n네 가지 실험으로 시각의 경계를 탐험하세요.\n\n청록색 바닥 표시를 따라 첫 번째 실험실로 들어가세요.\n노바와 대화하거나 조작 튜토리얼을 열 수도 있습니다.,editor DepthLabFacilityBuilder
+抓取 / 对齐 / 松手,Grab / Align / Release,잡기 / 맞추기 / 놓기,editor DepthLabInteractionUpgrade
+诺娃,NOVA,노바,editor DepthLabNovaBuilder
+研究助手 · 本地,Research assistant · Local,연구 도우미 · 로컬,editor DepthLabNovaBuilder
+与诺娃交流,TALK TO NOVA,노바와 대화,editor DepthLabNovaBuilder
+与诺娃交流，了解实验观察方法。,Talk to Nova to learn how to observe each experiment.,노바와 대화하며 실험 관찰 방법을 알아보세요.,editor DepthLabNovaBuilder
+请求提示（计入评分）,ASK FOR A HINT (affects score),힌트 요청 (점수 반영),editor DepthLabNovaBuilder
+请求本章提示，将计入本章评分。,Ask for a hint for this chapter; it counts toward this chapter's score.,이 챕터의 힌트를 요청합니다. 챕터 점수에 반영됩니다.,editor DepthLabNovaBuilder
+01 / 深度实验室\n观察距离，让形状归位,"01 / DEPTHLAB\nRead the distance, return the shapes",01 / DEPTHLAB\n거리를 읽고 도형을 제자리에,editor DepthLabPresentationUpgrade
+01  立方体,01  CUBE,01  정육면체,editor DepthLabPresentationUpgrade
+02  球体,02  SPHERE,02  구,editor DepthLabPresentationUpgrade
+03  三棱柱,03  TRIANGULAR PRISM,03  삼각기둥,editor DepthLabPresentationUpgrade
+近场,NEAR,근거리,editor DepthLabPresentationUpgrade
+中场,MID,중거리,editor DepthLabPresentationUpgrade
+远场,FAR,원거리,editor DepthLabPresentationUpgrade
+看清远近\n让三件形状归位,SEE NEAR AND FAR.\nRETURN THE THREE SHAPES.,멀고 가까움을 보고\n세 도형을 제자리에,editor DepthLabPresentationUpgrade
+01  抓取实体    02  对准轮廓    03  松开\n\n完成后沿地面导向走入出口,01  Grab    02  Align the outline    03  Release\n\nThen follow the floor guide into the exit,01  잡기    02  윤곽 맞추기    03  놓기\n\n완료 후 바닥 안내선을 따라 출구로,editor DepthLabPresentationUpgrade
+出口  /  等待实验完成,EXIT  /  Waiting for the experiment,출구  /  실험 완료 대기,editor DepthLabPresentationUpgrade
+完成目标后，直接穿过门口,"Once the goal is done, walk straight through the door",목표를 완료하면 바로 문을 통과하세요,editor DepthLabPresentationUpgrade
+01  抓取   /   02  归位   /   03  通行,01  GRAB   /   02  PLACE   /   03  PASS,01  잡기   /   02  놓기   /   03  통과,editor DepthLabPresentationUpgrade
+左键抓取 · 滚轮远近 · 右键观察 · WASD 移动,LMB grab · Scroll depth · RMB look · WASD move,왼쪽 클릭 잡기 · 휠 거리 · 오른쪽 클릭 시점 · WASD 이동,editor DepthLabPresentationUpgrade
+相信你的视角，\n不必相信眼前的空间。,"Trust your point of view,\nnot the space in front of you.","당신의 시점을 믿으세요,\n눈앞의 공간이 아니라.",editor DemoOpeningMenuUpgrade
+第一章   /   视差观测室,CHAPTER 1   /   PARALLAX OBSERVATORY,제1장   /   시차 관측실,editor DemoOpeningMenuUpgrade

@@ -45,7 +45,7 @@ namespace DepthLab.Editor
             public readonly List<string> fallbacks = new List<string>();
         }
 
-        [MenuItem("DEPTHLAB/创作第一章环境特效")]
+        [MenuItem("DEPTHLAB/Author Chapter 1 Ambient Effects")]
         public static void Apply()
         {
             Context c = Validate();

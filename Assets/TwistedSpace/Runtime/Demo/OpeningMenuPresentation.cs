@@ -1,6 +1,7 @@
 using TwistedSpace.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using DistortedSpace.Localization;
 
 namespace TwistedSpace.Demo
 {
@@ -64,8 +65,8 @@ namespace TwistedSpace.Demo
             if (inputHint && desktopHint != menuInput.IsDesktopMenuActive)
             {
                 desktopHint = menuInput.IsDesktopMenuActive;
-                inputHint.text = desktopHint.Value ? "鼠标点击进入 · 探索时启用 XR 模拟器" :
-                    "射线指向按钮 · 扳机按住 0.15 秒后松开";
+                inputHint.text = desktopHint.Value ? Loc.T("鼠标点击进入 · 探索时启用 XR 模拟器") :
+                    Loc.T("射线指向按钮 · 扳机按住 0.15 秒后松开");
             }
             if (flow.State != DemoState.MainMenu && stageHidden && mainMenuGroup.alpha <= 0.001f)
                 RestoreExploration();

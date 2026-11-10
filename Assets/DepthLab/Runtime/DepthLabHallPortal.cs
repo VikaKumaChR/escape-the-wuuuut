@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -30,7 +31,7 @@ namespace DepthLab
             unlocked = DepthLabProgress.Unlocked(chapterIndex);
             if (enterButton != null) enterButton.interactable = unlocked;
             if (status != null)
-                status.text = unlocked ? "已开放 · 穿过入口开始实验" : "未开放 · 请先完成上一项实验";
+                status.text = Loc.T(unlocked ? "已开放 · 穿过入口开始实验" : "未开放 · 请先完成上一项实验");
             if (indicator != null)
                 indicator.sharedMaterial = unlocked ? readyMaterial : lockedMaterial;
         }
@@ -62,7 +63,7 @@ namespace DepthLab
         {
             if (app == null)
             {
-                Debug.LogError("实验室入口未连接游戏控制器。", this);
+                Debug.LogError("Lab entrance is not connected to the DepthLabApp game controller.", this);
                 return;
             }
             if (!DepthLabProgress.Unlocked(chapterIndex) || app.IsPaused || app.IsPlaying)

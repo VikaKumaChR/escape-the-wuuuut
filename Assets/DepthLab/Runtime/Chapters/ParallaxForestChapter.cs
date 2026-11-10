@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -35,13 +36,13 @@ namespace DepthLab
         private bool desktopInspection;
 
         public bool PathDiscovered => discovered;
-        public override string Objective => PuzzleSolved ? "走进亮起的出口，前往下一关。" :
-            discovered ? $"点击亮起的 {steps + 1:00} 号平台，前往下一个落脚点。" :
-            XRSettings.isDeviceActive ? "保持原地，左右侧倾头部，让隐藏平台显形。" :
-                "先点「向左观察」，再点「向右观察」，让隐藏平台显形。";
+        public override string Objective => PuzzleSolved ? Loc.T("走进亮起的出口，前往下一关。") :
+            discovered ? Loc.F("点击亮起的 {0:00} 号平台，前往下一个落脚点。", steps + 1) :
+            XRSettings.isDeviceActive ? Loc.T("保持原地，左右侧倾头部，让隐藏平台显形。") :
+                Loc.T("先点「向左观察」，再点「向右观察」，让隐藏平台显形。");
         public override string Hint => discovered
-            ? "2. 按顺序选择四个安全平台；选错会返回最近的检查点。\n3. 全部通过后，步行穿过已开启的出口。"
-            : "1. 桌面：点击“向左观察”并等视角停稳，再点“向右观察”并等视角停稳。\nVR（启用 XR 后）：保持原地，左右侧倾头部，不用移动或转向操作；转向、传送不计入观察距离。";
+            ? Loc.T("2. 按顺序选择四个安全平台；选错会返回最近的检查点。\n3. 全部通过后，步行穿过已开启的出口。")
+            : Loc.T("1. 桌面：点击“向左观察”并等视角停稳，再点“向右观察”并等视角停稳。\nVR（启用 XR 后）：保持原地，左右侧倾头部，不用移动或转向操作；转向、传送不计入观察距离。");
         public override int Progress => steps;
         public override int Goal => 4;
         protected override bool PuzzleSolved => steps == Goal;
@@ -243,10 +244,10 @@ namespace DepthLab
 
             if (discoveryLabel != null)
                 discoveryLabel.text = discovered
-                    ? PuzzleSolved ? "3. 路径已通过，请步行穿过已开启的出口。" : "2. 路径已发现，请依次选择四个安全平台。"
+                    ? PuzzleSolved ? Loc.T("3. 路径已通过，请步行穿过已开启的出口。") : Loc.T("2. 路径已发现，请依次选择四个安全平台。")
                     : maximumX - minimumX < revealSpan * .45f
-                        ? "先点向左观察，等视角停稳"
-                        : "再点向右观察，平台就会显形";
+                        ? Loc.T("先点向左观察，等视角停稳")
+                        : Loc.T("再点向右观察，平台就会显形");
         }
     }
 }

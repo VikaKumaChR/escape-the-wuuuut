@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -17,6 +18,7 @@ namespace DepthLab
 
     public static class DepthLabProgress
     {
+        // Chinese source text doubles as localization keys: display these arrays through Loc.T(...).
         public static readonly string[] Titles = {
             "立体视差之室", "运动视差森林", "视觉错觉回廊", "光影迷宫"
         };
@@ -84,8 +86,8 @@ namespace DepthLab
         public static string Summary(int index)
         {
             ChapterRecord r = Read(index);
-            if (!Unlocked(index)) return "未解锁  /  请先完成上一章";
-            return r.completed ? $"{new string('★', r.stars)}   最佳成绩 {TimeLabel(r.seconds)}   /   错误 {r.mistakes} 次" : "已解锁  /  尚未探索";
+            if (!Unlocked(index)) return Loc.T("未解锁  /  请先完成上一章");
+            return r.completed ? Loc.F("{0}   最佳成绩 {1}   /   错误 {2} 次", new string('★', r.stars), TimeLabel(r.seconds), r.mistakes) : Loc.T("已解锁  /  尚未探索");
         }
     }
 }

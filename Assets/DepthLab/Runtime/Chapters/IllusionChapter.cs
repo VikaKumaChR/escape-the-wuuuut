@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -26,10 +27,10 @@ namespace DepthLab
         private bool paused;
         private string explanation = "";
 
-        public override string Objective => stage == LessonStage.PonzoQuestion ? "比较前方两个方块，在操作台选择「一样大」或「不一样」。"
-            : stage == LessonStage.MullerQuestion ? "只比较中间的线段，选择「一样长」或「不一样」。"
-            : stage == LessonStage.Finished ? "走进亮起的出口，前往光影实验室。"
-            : "答对了！点击「继续」，进入下一步。";
+        public override string Objective => stage == LessonStage.PonzoQuestion ? Loc.T("比较前方两个方块，在操作台选择「一样大」或「不一样」。")
+            : stage == LessonStage.MullerQuestion ? Loc.T("只比较中间的线段，选择「一样长」或「不一样」。")
+            : stage == LessonStage.Finished ? Loc.T("走进亮起的出口，前往光影实验室。")
+            : Loc.T("答对了！点击「继续」，进入下一步。");
         public override string Hint
         {
             get
@@ -37,14 +38,14 @@ namespace DepthLab
                 switch (stage)
                 {
                     case LessonStage.PonzoQuestion:
-                        return "1. 比较立方体的实际大小并选择答案；别被背景汇聚线误导。";
+                        return Loc.T("1. 比较立方体的实际大小并选择答案；别被背景汇聚线误导。");
                     case LessonStage.MullerQuestion:
-                        return "2. 比较中间的直线段并选择答案；不计两端的箭翼。";
+                        return Loc.T("2. 比较中间的直线段并选择答案；不计两端的箭翼。");
                     case LessonStage.PonzoExplanation:
                     case LessonStage.MullerExplanation:
-                        return "先阅读本题解释，再点击“继续”进入下一步。";
+                        return Loc.T("先阅读本题解释，再点击“继续”进入下一步。");
                     default:
-                        return "3. 两项比较已完成。请步行穿过已开启的出口。";
+                        return Loc.T("3. 两项比较已完成。请步行穿过已开启的出口。");
                 }
             }
         }
@@ -139,7 +140,7 @@ namespace DepthLab
             if (mullerDisplay != null)
                 mullerDisplay.SetActive(!ponzo);
             if (explanationLabel != null)
-                explanationLabel.text = explanation;
+                explanationLabel.text = Loc.T(explanation);
 
             bool canAnswer = CanInteract && !paused;
             SetAnswerButtons(ponzoAnswerButtons, stage == LessonStage.PonzoQuestion, canAnswer);

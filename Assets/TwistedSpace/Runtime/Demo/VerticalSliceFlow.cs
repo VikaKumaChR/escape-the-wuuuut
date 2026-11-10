@@ -3,6 +3,7 @@ using TwistedSpace.Puzzles;
 using TwistedSpace.UI;
 using UnityEngine;
 using UnityEngine.UI;
+using DistortedSpace.Localization;
 
 namespace TwistedSpace.Demo
 {
@@ -33,6 +34,7 @@ namespace TwistedSpace.Demo
         [SerializeField] private Slider alignmentSlider;
         [SerializeField] private Slider stableHoldSlider;
 
+        // Chinese source text doubles as localization keys (shown through Loc.T).
         private static readonly string[] Hints =
         {
             "第一步：回到地面标记的观测区，面向三个几何框。",
@@ -67,7 +69,7 @@ namespace TwistedSpace.Demo
             hintPanel.FollowHead = false;
             ConfigureSlider(alignmentSlider);
             ConfigureSlider(stableHoldSlider);
-            hintText.text = Hints[0];
+            hintText.text = Loc.T(Hints[0]);
             resultText.text = string.Empty;
 
             // All panel Awakes have run. Suppress startup flashes even if startVisible was true.
@@ -138,7 +140,7 @@ namespace TwistedSpace.Demo
                 return;
             hintIndex = (hintIndex + 1) % Hints.Length;
             HintsUsed++;
-            hintText.text = Hints[hintIndex];
+            hintText.text = Loc.T(Hints[hintIndex]);
         }
 
         public void ReturnToMenu()
@@ -176,7 +178,7 @@ namespace TwistedSpace.Demo
             ElapsedSeconds = 0f;
             HintsUsed = 0;
             hintIndex = 0;
-            hintText.text = Hints[0];
+            hintText.text = Loc.T(Hints[0]);
             resultText.text = string.Empty;
             displayedSecond = -1;
             displayedPercent = -1;
@@ -197,7 +199,7 @@ namespace TwistedSpace.Demo
 
             State = DemoState.Solved;
             int seconds = Mathf.FloorToInt(ElapsedSeconds);
-            resultText.text = $"挑战完成！\n用时：{seconds / 60}分{seconds % 60:00}秒\n使用提示：{HintsUsed}次";
+            resultText.text = Loc.F("挑战完成！\n用时：{0}分{1:00}秒\n使用提示：{2}次", seconds / 60, seconds % 60, HintsUsed);
             alignmentSlider.SetValueWithoutNotify(1f);
             stableHoldSlider.SetValueWithoutNotify(1f);
             exitDoor.Open();
@@ -215,9 +217,9 @@ namespace TwistedSpace.Demo
             for (int i = 0; i < targets.Length; i++)
                 pendingReset |= targets[i].IsResetPending;
 
-            string status = pendingReset ? "松开手柄以完成重置" :
-                !observationVolume.IsHeadInside ? "请进入观测区" :
-                puzzle.StableHoldProgress > 0f ? "保持视角" : "调整物体与视角";
+            string status = pendingReset ? Loc.T("松开手柄以完成重置") :
+                !observationVolume.IsHeadInside ? Loc.T("请进入观测区") :
+                puzzle.StableHoldProgress > 0f ? Loc.T("保持视角") : Loc.T("调整物体与视角");
             int second = Mathf.FloorToInt(ElapsedSeconds);
             int percent = Mathf.RoundToInt(alignment * 100f);
             if (status == displayedStatus && second == displayedSecond && percent == displayedPercent)
@@ -226,7 +228,7 @@ namespace TwistedSpace.Demo
             displayedStatus = status;
             displayedSecond = second;
             displayedPercent = percent;
-            statusText.text = $"{status}\n对齐：{percent}%　用时：{second / 60}:{second % 60:00}";
+            statusText.text = status + "\n" + Loc.F("对齐：{0}%　用时：{1}:{2:00}", percent, second / 60, second % 60);
         }
 
         private void ShowStatePanels()

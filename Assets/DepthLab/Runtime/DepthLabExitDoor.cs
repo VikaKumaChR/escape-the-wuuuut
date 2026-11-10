@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -88,12 +89,12 @@ namespace DepthLab
             if (labelState == state) return;
             labelState = state;
             if (statusLabel != null)
-                statusLabel.text = !solved ? "出口未解锁" : paused ? "已暂停" : IsOpen ? "出口已开启" : "正在开门";
+                statusLabel.text = Loc.T(!solved ? "出口未解锁" : paused ? "已暂停" : IsOpen ? "出口已开启" : "正在开门");
             if (conditionLabel != null)
                 conditionLabel.text = !solved
-                    ? $"实验进度 {progress} / {(chapter != null ? chapter.Goal : 0)}\n完成后门会自动打开"
-                    : paused ? "继续后穿过出口" : !IsOpen ? "请稍候"
-                    : chapter.chapterIndex == 3 ? "穿过门框 · 查看总结" : "穿过门框 · 自动进入下一章";
+                    ? Loc.F("实验进度 {0} / {1}\n完成后门会自动打开", progress, chapter != null ? chapter.Goal : 0)
+                    : paused ? Loc.T("继续后穿过出口") : !IsOpen ? Loc.T("请稍候")
+                    : chapter.chapterIndex == 3 ? Loc.T("穿过门框 · 查看总结") : Loc.T("穿过门框 · 自动进入下一章");
         }
         private void PositionPanels()
         {

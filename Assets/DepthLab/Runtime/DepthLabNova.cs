@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using DistortedSpace.Localization;
 
 namespace DepthLab
 {
@@ -58,12 +59,12 @@ namespace DepthLab
                 if (chapter >= 0 && chapter < app.chapters.Length)
                 {
                     transform.position = app.chapters[chapter].transform.TransformPoint(new Vector3(-2.5f, 0, -1.3f));
-                    Speak("欢迎来到" + DepthLabProgress.Titles[chapter] + "。先观察目标，再动手验证。", Emotion.Curious);
+                    Speak(Loc.F("欢迎来到{0}。先观察目标，再动手验证。", Loc.T(DepthLabProgress.Titles[chapter])), Emotion.Curious);
                 }
                 else
                 {
                     transform.position = new Vector3(2.8f, 0, 1.2f);
-                    Speak("欢迎，我是诺娃。沿青色标记前往第一实验室，也可以向我了解操作方法。", Emotion.Happy);
+                    Speak(Loc.T("欢迎，我是诺娃。沿青色标记前往第一实验室，也可以向我了解操作方法。"), Emotion.Happy);
                 }
                 Vector3 facing = app.Head.position - transform.position;
                 facing.y = 0;
@@ -75,15 +76,15 @@ namespace DepthLab
                 int current = app.chapters[chapter].Progress;
                 if (progress >= 0 && current > progress)
                     Speak(current >= app.chapters[chapter].Goal
-                        ? "实验完成！出口正在打开，我们继续下一项研究。"
-                        : "做得很好，观察结果已经记录。继续下一个目标。",
+                        ? Loc.T("实验完成！出口正在打开，我们继续下一项研究。")
+                        : Loc.T("做得很好，观察结果已经记录。继续下一个目标。"),
                         current >= app.chapters[chapter].Goal ? Emotion.Excited : Emotion.Happy);
                 if (mistakes >= 0 && app.Mistakes > mistakes)
-                    Speak("没关系，错误也是线索。换一个角度观察，我会陪你继续尝试。", Emotion.Encouraging);
+                    Speak(Loc.T("没关系，错误也是线索。换一个角度观察，我会陪你继续尝试。"), Emotion.Encouraging);
                 progress = current;
                 mistakes = app.Mistakes;
                 if (Time.time - lastActivity > 45f)
-                    Speak("可以走到侧面观察前后距离。需要具体帮助时，点击请求提示。", Emotion.Thinking);
+                    Speak(Loc.T("可以走到侧面观察前后距离。需要具体帮助时，点击请求提示。"), Emotion.Thinking);
             }
             bool speaking = Time.time < speechUntil;
             if (!speaking && State != Emotion.Neutral) SetEmotion(Emotion.Neutral);
@@ -97,7 +98,7 @@ namespace DepthLab
             if (app == null || app.IsPaused) return;
             Speak(app.IsPlaying && app.ActiveChapter >= 0
                 ? app.chapters[app.ActiveChapter].Objective
-                : "这里研究双眼视差、运动视差、视觉错觉和光线。你可以自由探索大厅，或从操作教程开始。",
+                : Loc.T("这里研究双眼视差、运动视差、视觉错觉和光线。你可以自由探索大厅，或从操作教程开始。"),
                 Emotion.Curious);
         }
 

@@ -63,7 +63,7 @@ namespace DepthLab
             if (app == null || chapter == null || chapter.chapterIndex != 0 || headCamera == null ||
                 audioSource == null || successCue == null || errorCue == null || grabCue == null || releaseCue == null)
             {
-                Fail("第一章特效缺少应用、章节、相机或音效引用，请重新应用特效配置。");
+                Fail("Chapter 1 effects are missing the app, chapter, camera or audio references. Re-apply the effects setup.");
                 return;
             }
             block = new MaterialPropertyBlock();
@@ -75,18 +75,18 @@ namespace DepthLab
                     doorEnergy == null || doorEnergy.Length == 0 ||
                     chapter.emptySlotMaterials == null || chapter.emptySlotMaterials.Length != 3)
                 {
-                    Fail("第一章环境特效缺少物体、目标环、出口或微尘引用。");
+                    Fail("Chapter 1 environment effects are missing piece, target ring, exit or dust references.");
                     return;
                 }
                 for (int i = 0; i < pieceEffects.Length; i++)
                     if (pieceEffects[i] == null || pieceEffects[i].piece == null ||
                         pieceEffects[i].piece.identity != i || targetRings[i] == null)
                     {
-                        Fail("第一章特效的物体与目标环必须按标识顺序配置。");
+                        Fail("Chapter 1 effect pieces and target rings must be assigned in identity order.");
                         return;
                     }
                 for (int i = 0; i < doorEnergy.Length; i++)
-                    if (doorEnergy[i] == null) { Fail("出口能量框引用缺失。"); return; }
+                    if (doorEnergy[i] == null) { Fail("The exit energy frame reference is missing."); return; }
                 CacheEnvironment();
             }
             else
@@ -95,7 +95,7 @@ namespace DepthLab
                     snapParticles == null || highlightMaterial == null || sourceRenderers == null ||
                     sourceRenderers.Length == 0)
                 {
-                    Fail("交互特效缺少原始网格、物理物体、抓取组件或粒子引用。");
+                    Fail("Interaction effects are missing the source mesh, physics body, grab component or particle references.");
                     return;
                 }
                 for (int i = 0; i < sourceRenderers.Length; i++)
@@ -105,7 +105,7 @@ namespace DepthLab
                     if (!(source is MeshRenderer) || filter == null || filter.sharedMesh == null ||
                         !source.transform.IsChildOf(piece.transform))
                     {
-                        Fail("交互特效仅支持物体自身的原始静态网格。");
+                        Fail("Interaction effects only support the piece's own static source meshes.");
                         return;
                     }
                 }
@@ -403,7 +403,7 @@ namespace DepthLab
 
         private void BuildRenderProxies()
         {
-            var root = new GameObject("吸附渲染代理");
+            var root = new GameObject("Snap Render Proxy");
             root.SetActive(false);
             proxyRoot = root.transform;
             proxyRoot.SetParent(piece.transform.parent, false);
@@ -430,7 +430,7 @@ namespace DepthLab
                 proxy.renderingLayerMask = source.renderingLayerMask;
                 proxies[i] = proxy;
 
-                var shell = new GameObject("抓取轮廓");
+                var shell = new GameObject("Grab Outline");
                 shell.layer = source.gameObject.layer;
                 shell.transform.SetParent(source.transform, false);
                 shell.transform.localScale = Vector3.one * 1.035f;
@@ -453,7 +453,7 @@ namespace DepthLab
         {
             if (copies.TryGetValue(source, out Transform existing)) return existing;
             Transform parent = CopyTransform(source.parent, copies);
-            Transform copy = new GameObject("网格姿态").transform;
+            Transform copy = new GameObject("Mesh Pose").transform;
             copy.SetParent(parent, false);
             copy.localPosition = source.localPosition;
             copy.localRotation = source.localRotation;
