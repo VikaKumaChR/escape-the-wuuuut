@@ -1,0 +1,11 @@
+{
+    "name": "TwistedSpace.Runtime",
+    "rootNamespace": "TwistedSpace",
+    "references": [
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem",
+        "Unity.ugui"
+    ],
+    "autoReferenced": true
+}

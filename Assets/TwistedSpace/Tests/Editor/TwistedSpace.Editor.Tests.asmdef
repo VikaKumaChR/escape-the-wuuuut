@@ -1,0 +1,14 @@
+{
+    "name": "TwistedSpace.Editor.Tests",
+    "references": [
+        "TwistedSpace.Runtime",
+        "TwistedSpace.Editor",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem",
+        "Unity.ugui"
+    ],
+    "includePlatforms": ["Editor"],
+    "optionalUnityReferences": ["TestAssemblies"],
+    "autoReferenced": false
+}

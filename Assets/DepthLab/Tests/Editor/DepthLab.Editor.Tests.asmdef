@@ -1,0 +1,19 @@
+{
+    "name": "DepthLab.Editor.Tests",
+    "rootNamespace": "DepthLab.Tests",
+    "references": [
+        "DepthLab.Runtime",
+        "UnityEngine.UI",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
+        "Unity.XR.Interaction.Toolkit"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "autoReferenced": false
+}

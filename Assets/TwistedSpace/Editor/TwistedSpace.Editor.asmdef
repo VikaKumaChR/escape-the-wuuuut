@@ -1,0 +1,13 @@
+{
+    "name": "TwistedSpace.Editor",
+    "rootNamespace": "TwistedSpace.Editor",
+    "references": [
+        "TwistedSpace.Runtime",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem",
+        "Unity.ugui"
+    ],
+    "includePlatforms": ["Editor"],
+    "autoReferenced": true
+}

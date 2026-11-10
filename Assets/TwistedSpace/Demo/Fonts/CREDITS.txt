@@ -1,0 +1,9 @@
+Noto Sans CJK SC Medium
+Source: https://github.com/notofonts/noto-cjk
+Original file: Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Medium.otf
+Copyright holders and font notices are embedded in the original font.
+Distributed unchanged under the SIL Open Font License 1.1; see OFL.txt.
+The local filename is NotoSansSC-Medium.otf for project organization.
+
+The static Medium font is used instead of the variable font so Unity's
+standard UGUI Text consistently renders a readable weight in a headset.

@@ -1,0 +1,13 @@
+{
+    "name": "DepthLab.Runtime",
+    "rootNamespace": "DepthLab",
+    "references": [
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.InputSystem",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "TwistedSpace.Runtime"
+    ],
+    "autoReferenced": true
+}

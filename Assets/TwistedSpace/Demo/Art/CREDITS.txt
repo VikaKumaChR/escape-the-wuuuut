@@ -1,0 +1,17 @@
+Displaced Order / original demo art
+==================================
+
+These PNG textures and geometric icons were procedurally authored for this project.
+No third-party texture pack, copied game UI, paid asset or external image-generation
+service was used.
+
+PanelGlass: nine-slice dark instrument glass with a restrained cyan edge.
+ButtonFace / ButtonHalo: nine-slice button field and soft hover outline.
+IconObserve / IconReset / IconComplete / IconDoor / IconPlay / IconHint:
+transparent geometric glyphs, tinted in Unity rather than duplicated by state.
+Concrete / BrushedMetal / FloorPanels: small tileable 3D surface textures.
+OpeningThreshold: original architectural key art for the fixed opening menu.
+The lettering and button remain editable UGUI, not text baked into the image.
+
+All lighting and glass effects remain local to the material/UI. These assets do not
+require camera blur, bloom, screen-space distortion or a third-party animation package.

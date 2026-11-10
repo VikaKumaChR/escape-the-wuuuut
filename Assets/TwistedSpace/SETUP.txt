@@ -1,0 +1,89 @@
+逃离扭曲空间：VR 面板与强迫透视解谜
+====================================
+
+版本与输入
+----------
+XR Interaction Toolkit 固定为 3.3.2；使用 New Input System。
+当前工程的实际编辑器版本是 Unity 6000.6.8f1，不是 6000.3 LTS；
+没有修改编辑器版本，也没有降级当前 URP。脚本使用 Unity 6 / XRI 3.x API。
+XR Device Simulator 是官方包提供的经典模拟器，不使用 Legacy Input Manager。
+Mac Apple Silicon 上键鼠模拟不需要安装 SteamVR 或启动真实头显运行时。
+真实头显构建需要另行按目标设备配置对应 XR Provider。
+
+准备 XR 场景
+-----------
+1. 等待 Unity 导入完包与脚本。官方 XR Device Simulator 样例已导入 Assets/Samples。
+   如需重新导入，使用菜单 Twisted Space > 1. Import XR Device Simulator。
+2. 在没有 Camera、EventSystem 或 XR Origin 的场景中，执行
+   Twisted Space > 2. Create Simulator XR Rig，并保存场景。
+   工具不会删除已有相机，也不会覆盖已有场景。
+3. 生成的左右控制器均包含 XRDirectInteractor：握柄负责直接抓取。
+   XRRayInteractor 仅负责 UI：UI Press 绑定扳机，避免与抓取争抢选择。
+   UI 输入模块使用 XRUIInputModule，不使用 StandaloneInputModule 或 InputSystemUIInputModule。
+4. 官方模拟器的帮助 Overlay 已在生成的实例上禁用。
+   样例中的帮助 UI 资源无需拖入游戏场景。游戏 UI 一律使用 World Space。
+5. 在 Game 窗口使用模拟器。按键以样例内三个 .inputactions 资源为准，
+   可在 Inspector 中查看或修改绑定。不要同时启用两个模拟器。
+
+面板与按钮
+----------
+Canvas 挂 VRWorldSpacePanel，渲染模式为 World Space；不要把面板设为头显子物体。
+将 XR Origin 内 Main Camera 拖到头显相机字段。
+Canvas 需要 CanvasGroup 和 TrackedDeviceGraphicRaycaster；脚本会要求这些组件。
+建议 Canvas 尺寸 700 x 400、世界缩放 0.0015，按钮高度至少 70 像素。
+避免给面板添加遮挡自身射线的 Collider。
+
+用 ConfirmedXRButton 替代普通 Button 组件（同一物体不要同时挂两个 Button）。
+将按钮 Image 指定为 Target Graphic，图片基础颜色不宜纯白，否则没有提亮余量。
+可为按钮配置淡蓝色 Halo Image；其 Raycast Target 应关闭。
+普通 UGUI 是不受光照的材质，高亮/光晕模拟自发光观感，不依赖 Bloom 或重后处理。
+每个按钮的 On Click 可绑定自己的 UnityEvent 回调。
+确认按钮依赖射线松开时的点击事件，不支持 Poke 的 Click UI On Down 模式。
+扳机必须持续按住至少 0.15 秒并在同一按钮上松开，才触发一次回调；
+提前松开、移出按钮、隐藏面板或禁用交互都会取消。
+不要额外在 EventTrigger / PointerDown 上调用业务事件，否则会绕过确认保护。
+
+面板公开 FadeIn() / FadeOut()，淡入淡出使用协程，时长可调。
+将“重置谜题”“返回”按钮拖到面板对应字段，再绑定 OnResetPuzzle / OnBack。
+同一个业务函数只绑定一次：不要同时在按钮 On Click 与面板事件重复绑定。
+返回事件由游戏自行决定是隐藏面板、返回房间还是切换关卡；脚本不会擅自退出应用。
+
+解谜配置
+--------
+区域使用 PuzzleObservationVolume，目标使用 PerspectivePuzzleTarget，
+总控制器使用 ForcedPerspectivePuzzle。每个字段都有注释与 Inspector 提示。
+区域应为 Trigger；指定头显的专用碰撞体作为观察者，不使用手柄或道具碰撞体。
+触发双方至少有一方带 Rigidbody；头部检测体建议使用小型 SphereCollider，
+配合 Is Kinematic、Use Gravity=false 的 Rigidbody，跟随头显。
+头部检测体可设为 Trigger，避免推挤场景物体。
+
+每个目标根物体需要 Collider、Rigidbody、XRGrabInteractable 和 PerspectivePuzzleTarget。
+不要使用非凸动态 MeshCollider；简单 BoxCollider 或凸碰撞体更适合 VR。
+目标材质使用 URP/Lit 等带 _EmissionColor 的 Shader。
+构建前应在这些材质资源上启用 Emission，并设置很低的非零基础发光，
+使构建保留 _EMISSION 着色器变体；不要仅依赖运行时开启关键字来避免变体剥离。
+抓取后需要悬浮的几何体建议关闭 Rigidbody 的 Use Gravity。
+只把参与轮廓判定的 Renderer 加入目标列表，不要把辅助标记/阴影平面包含进去。
+
+总控制器绑定区域、Main Camera、目标数组和正确观察方向的 Transform。
+复合观测区域用多个子物体的 BoxCollider + PuzzleObservationVolume，
+将它们全部拖入控制器的 Observation Volumes 数组。
+正确方向使用该 Transform 的蓝色 +Z 轴，需在 Scene 中朝向解谜物体。
+将 OnPuzzleSolved 绑定开门、音效等动作；重置按钮绑定 ResetPuzzle()。
+进度事件可绑定 World Space UGUI Slider.value；Slider 范围设为 0..1，
+仅作展示时关闭 Interactable。进度不代表某一个目标单独合格，必须所有目标同时对齐。
+
+判定使用投影包围盒近似，不是像素轮廓识别或 GPU 遮挡测试。
+因此应按指定观测点设计几何体大小/距离，使它们的投影包围盒可以相互覆盖；
+“互补拼成一个完整形状”的拼图不适合直接使用这个重合算法。
+判定使用中心眼（Mono）投影，避免双目交替产生进度抖动。
+背后、越过近裁剪面或离开视野的目标不能通过判定。
+成功锁存，直到显式调用 ResetPuzzle；不要把成功事件回接到自身 ResetPuzzle。
+重置时若目标仍被抓住，会提示玩家松手；最后一只手放开并完成 XRI 分离后，
+再恢复该目标初始姿态，不会突然拖动玩家手柄。等待重置的目标不能参与判定。
+
+手感默认值
+----------
+采用较慢的头部跟随、柔和的 hover 过渡和 0.65 的宽松对齐阈值。
+运行时调参后应退出 Play Mode，再在场景/预制体上保存参数。
+以后要继续调手感，只需修改 Inspector 中的时间、阈值和曲线，不必改动事件结构。

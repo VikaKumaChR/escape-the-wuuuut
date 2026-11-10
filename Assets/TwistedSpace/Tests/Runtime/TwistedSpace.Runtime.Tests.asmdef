@@ -1,0 +1,11 @@
+{
+    "name": "TwistedSpace.Runtime.Tests",
+    "references": [
+        "TwistedSpace.Runtime",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.InputSystem",
+        "Unity.ugui"
+    ],
+    "optionalUnityReferences": ["TestAssemblies"],
+    "autoReferenced": false
+}
