@@ -13,7 +13,7 @@
 | Languages | ✅ English / 한국어 / 中文 (press **L**) — Korean needs a native review |
 | VR | ⚠️ Controls are implemented, but **no XR loader** is installed (no OpenXR / XR Management) |
 | Comfort | ⚠️ Snap turn and stepped movement exist; **no vignette** yet |
-| Tests | ⚠️ 14 test files; one door-label test still expects an old label and is expected to fail |
+| Tests | ⚠️ EditMode 172/195 and PlayMode 19/61 pass; every failure already happens on the original import (run 2026-11-11, before and after localization) |
 | Tooling | ⚠️ The project path on Windows exceeds 260 characters, which breaks some editor windows |
 
 ## Timeline
@@ -59,6 +59,7 @@ gantt
 | T16 | Playtest with 5+ people; log time, mistakes, hints (already recorded by the game) | Research | P0 | 4 | Results table + 3 key findings |
 | T17 | Final build, demo video, screenshots/GIFs in the README | Delivery | P0 | 4 | Build + video uploaded |
 | T18 | Final presentation slides (EN, with KO speaker notes) | Delivery | P0 | 4 | Rehearsed once |
+| T19 | Fix the pre-existing test failures: 17 `DepthLabInputTests` (grab physics), 3 `PlayableDemoSceneTests` + 2 `SimulatorRigTests` (Twisted Space), 42 `SimulatorMenuInputTests` (TearDown: "Failed setting EventSystem.current") — re-check after T04, since the long Windows path may cause some | QA | P1 | 3 | All tests pass |
 
 **Priorities:** P0 = required for the final · P1 = strongly recommended · P2 = nice to have.
 

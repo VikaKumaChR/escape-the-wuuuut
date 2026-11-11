@@ -258,7 +258,7 @@ Tab  切换控制的设备\n按住右键  调整头部视角\nR  切换鼠标平
 把反射光\n照到接收球上,AIM THE REFLECTION\nAT THE RECEIVER,반사광을\n수신 구체에 비추기,ParallaxChamber.unity; editor DepthLabEntryUpgrade
 跳过教程,SKIP TUTORIAL,튜토리얼 건너뛰기,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabCyberpunkUpgrade
 哑光陶瓷\n金属度 0.00 / 粗糙度 0.76,MATTE CERAMIC\nM 0.00 / R 0.76,무광 세라믹\n금속성 0.00 / 거칠기 0.76,ParallaxChamber.unity; editor DepthLabChineseLocalization
-预览,PREVIEW,미리보기,ParallaxChamber.unity; editor DepthLabChineseLocalization
+预览,DEMO,데모,ParallaxChamber.unity; editor DepthLabChineseLocalization
 此操作无法撤销。,This action cannot be undone.,이 작업은 되돌릴 수 없습니다.,ParallaxChamber.unity; editor DepthLabChineseLocalization
 紫色球体,VIOLET SPHERE,보라색 구,ParallaxChamber.unity; editor DepthLabChineseLocalization; editor DepthLabInteractionUpgrade
 追随光线。\n比较金属与粗糙表面，将反射光束引向接收器。,"Follow the light.\nCompare metal and rough surfaces, and guide the reflected beam to the receiver.","빛을 따라가세요.\n금속 표면과 거친 표면을 비교하고, 반사된 빛줄기를 수신기로 이끄세요.",ParallaxChamber.unity

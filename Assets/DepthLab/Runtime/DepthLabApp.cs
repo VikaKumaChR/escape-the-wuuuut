@@ -53,6 +53,7 @@ namespace DepthLab
         private GameObject modalReturn;
         private GameObject visiblePage;
         private bool lastXR;
+        private ChapterRecord lastRun;
 
         private void Awake()
         {
@@ -63,13 +64,27 @@ namespace DepthLab
             ApplyAudio();
             tutorial.Changed += RefreshTutorial;
             tutorial.Finished += TutorialFinished;
+            Loc.LanguageChanged += RelocalizeDynamicText;
         }
         private void Start() { ShowMenu(); }
         private void OnDestroy()
         {
             tutorial.Changed -= RefreshTutorial;
             tutorial.Finished -= TutorialFinished;
+            Loc.LanguageChanged -= RelocalizeDynamicText;
             if (Instance == this) Instance = null;
+        }
+
+        // Text built from numbers is not a fixed string-table entry, so rebuild it when the language changes.
+        private void RelocalizeDynamicText()
+        {
+            if (chapterStatuses != null && homeStatuses != null) RefreshProgress();
+            if (IsTutorial && tutorial != null && tutorialText != null && tutorialNextButton != null) RefreshTutorial();
+            if (IsPlaying && hudText != null && ActiveChapter >= 0 && ActiveChapter < chapters.Length) RefreshHud();
+            if (visiblePage == null) return;
+            if (visiblePage == detailPage) WriteDetailTexts(selectedChapter);
+            else if (visiblePage == resultPage) WriteResultTexts();
+            else if (visiblePage == finalPage) WriteFinalTexts();
         }
         private void Update()
         {
@@ -186,9 +201,7 @@ namespace DepthLab
         {
             if (index < 0 || index >= chapters.Length) return;
             selectedChapter = index;
-            detailTitle.text = $"{index + 1:00}  /  {Loc.T(DepthLabProgress.Titles[index])}";
-            detailBody.text = Loc.F("{0}\n\n{1}\n\n预计用时    {2}\n\n{3}", Loc.T(DepthLabProgress.Concepts[index]), Loc.T(DepthLabProgress.Descriptions[index]), Loc.T(DepthLabProgress.Times[index]), chapters[index].Hint);
-            detailStatus.text = DepthLabProgress.Summary(index);
+            WriteDetailTexts(index);
             if (detailIllustration != null)
             {
                 detailIllustration.illustration = (DepthLabHolographicGraphic.Illustration)(index + 1);
@@ -196,6 +209,13 @@ namespace DepthLab
             }
             playSelectedButton.interactable = DepthLabProgress.Unlocked(index);
             ShowPage(detailPage);
+        }
+        private void WriteDetailTexts(int index)
+        {
+            if (index < 0 || index >= chapters.Length || detailTitle == null || detailBody == null || detailStatus == null) return;
+            detailTitle.text = $"{index + 1:00}  /  {Loc.T(DepthLabProgress.Titles[index])}";
+            detailBody.text = Loc.F("{0}\n\n{1}\n\n预计用时    {2}\n\n{3}", Loc.T(DepthLabProgress.Concepts[index]), Loc.T(DepthLabProgress.Descriptions[index]), Loc.T(DepthLabProgress.Times[index]), chapters[index].Hint);
+            detailStatus.text = DepthLabProgress.Summary(index);
         }
         public void StartChapter(int index, bool replay = false)
         {
@@ -255,11 +275,18 @@ namespace DepthLab
         public void CompleteChapter()
         {
             if (!TrySaveChapter(out ChapterRecord run)) return;
-            resultTitle.text = new string('★', run.stars) + "\n" + Loc.F("第 {0:00} 章已完成", ActiveChapter + 1);
-            resultBody.text = Loc.F("{0}\n\n用时  {1}       错误  {2}\n提示  {3}       重试  {4}\n\n{5}\n\n最佳成绩已自动保存。", Loc.T(DepthLabProgress.Titles[ActiveChapter]), DepthLabProgress.TimeLabel(ElapsedSeconds), Mistakes, Hints, Retries, Loc.T(ActiveChapter == 3 ? "已探索全部四个感知实验室" : "下一章已解锁"));
-            nextChapterButton.GetComponentInChildren<TMP_Text>().text = Loc.T(ActiveChapter == 3 ? "最终总结" : "下一章");
+            lastRun = run;
+            WriteResultTexts();
             PlaceModal();
             ShowPage(resultPage);
+        }
+        private void WriteResultTexts()
+        {
+            if (lastRun == null || ActiveChapter < 0 || ActiveChapter >= chapters.Length || resultTitle == null || resultBody == null) return;
+            resultTitle.text = new string('★', lastRun.stars) + "\n" + Loc.F("第 {0:00} 章已完成", ActiveChapter + 1);
+            resultBody.text = Loc.F("{0}\n\n用时  {1}       错误  {2}\n提示  {3}       重试  {4}\n\n{5}\n\n最佳成绩已自动保存。", Loc.T(DepthLabProgress.Titles[ActiveChapter]), DepthLabProgress.TimeLabel(ElapsedSeconds), Mistakes, Hints, Retries, Loc.T(ActiveChapter == 3 ? "已探索全部四个感知实验室" : "下一章已解锁"));
+            if (nextChapterButton != null)
+                nextChapterButton.GetComponentInChildren<TMP_Text>().text = Loc.T(ActiveChapter == 3 ? "最终总结" : "下一章");
         }
 
         public void CompleteChapterFromExit(LabChapter source)
@@ -360,6 +387,12 @@ namespace DepthLab
         private void ShowFinal()
         {
             ShowMenu();
+            WriteFinalTexts();
+            ShowPage(finalPage);
+        }
+        private void WriteFinalTexts()
+        {
+            if (finalCards == null || finalTotals == null) return;
             int stars = 0, completed = 0;
             float seconds = 0;
             for (int i = 0; i < 4; i++)
@@ -369,7 +402,6 @@ namespace DepthLab
                 finalCards[i].text = $"{i + 1:00}  {Loc.T(DepthLabProgress.Titles[i])}\n{DepthLabProgress.Summary(i)}";
             }
             finalTotals.text = Loc.T(completed == 4 ? "深度探索者" : "探索进行中") + "\n" + Loc.F("实验室 {0}/4    星级 {1}/12    最佳成绩总用时 {2}", completed, stars, DepthLabProgress.TimeLabel(seconds));
-            ShowPage(finalPage);
         }
         private void ShowModal(LabAction confirm, string text)
         {

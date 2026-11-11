@@ -69,7 +69,13 @@ namespace DepthLab
             ApplyGuidanceLayout();
             SetFeedback(0f);
             Refresh();
+            Loc.LanguageChanged += MarkLabelsDirty;
         }
+
+        private void OnDisable() => Loc.LanguageChanged -= MarkLabelsDirty;
+
+        // Rebuild every label in the new language on the next refresh.
+        private void MarkLabelsDirty() => refreshLabels = true;
 
         private void Cache()
         {

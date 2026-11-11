@@ -19,7 +19,9 @@ namespace DepthLab
                 if (app != null) settings = app.settings;
             }
             Refresh();
+            Loc.LanguageChanged += Refresh;
         }
+        private void OnDisable() => Loc.LanguageChanged -= Refresh;
         public void Refresh()
         {
             if (settings == null || master == null) return;

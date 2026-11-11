@@ -21,8 +21,10 @@ namespace DepthLab
         private bool hasSample, approaching, crossed;
         private int labelState = -1;
 
-        private void OnEnable() { CloseImmediate(); }
-        private void OnDisable() { CloseImmediate(); }
+        private void OnEnable() { CloseImmediate(); Loc.LanguageChanged += ForceLabelRefresh; }
+        private void OnDisable() { CloseImmediate(); Loc.LanguageChanged -= ForceLabelRefresh; }
+        // The label cache only tracks progress/state, so drop it when the language changes.
+        private void ForceLabelRefresh() => labelState = -1;
 
         public void CloseImmediate()
         {

@@ -63,6 +63,23 @@ You walk through four short laboratories. Each one turns a depth cue your brain 
 
 Full controls and a spoiler walkthrough: **[How to Play](docs/en/how-to-play.md)**.
 
+## 📸 Screenshots
+
+The main screens in all three languages, captured in Unity with *Tools › Distorted Space › Localization › Capture UI Screenshots*:
+
+<p align="center"><img src="docs/images/screens/compare-grid.png" alt="Main menu, chapter select, settings, tutorial and Lab 01 in English, Korean and Chinese" width="100%"></p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/screens/menu-en.png" alt="Main menu in English"></td>
+    <td width="50%"><img src="docs/images/screens/lab01-ko.png" alt="Lab 01 with the HUD and Nova in Korean"></td>
+  </tr>
+  <tr>
+    <td align="center">Main menu · English</td>
+    <td align="center">Lab 01 · 한국어</td>
+  </tr>
+</table>
+
 ## 🚀 Quick start
 
 1. Install **Unity 6000.6.8f1** with Unity Hub (other versions will ask to upgrade the project).
@@ -150,7 +167,7 @@ How it works and how to edit translations: **[Localization guide](docs/en/locali
 
 - **No XR loader yet** — OpenXR / XR Management are not installed, so the build runs as a desktop preview.
 - **Windows path length** — a deeply nested project folder breaks some editor windows (Input Actions editor, Render Pipeline Converter). Use a short path.
-- **One outdated test** — `DoorLabelsDescribeLockedOpeningReadyPausedAndResetStates` still expects an older door label.
+- **Pre-existing test failures** — EditMode 172/195 and PlayMode 19/61 pass. Every failure already happens on the original import (verified by running both suites before and after the localization); see T12 and T19 in the [dev plan](docs/en/dev-plan.md).
 - **Unity Cloud link** — the project is still linked to the original author's Unity Cloud project, which logs a harmless 403 on startup.
 - **No comfort vignette** during VR locomotion yet.
 - Hierarchy object names stay in Chinese on purpose (scripts look them up by name); see the [glossary](docs/glossary.md).

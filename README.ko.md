@@ -63,6 +63,23 @@
 
 전체 조작법과 공략(스포일러): **[플레이 방법](docs/ko/how-to-play.md)**.
 
+## 📸 스크린샷
+
+Unity에서 *Tools › Distorted Space › Localization › Capture UI Screenshots*로 자동 캡처한 주요 화면(세 언어):
+
+<p align="center"><img src="docs/images/screens/compare-grid.png" alt="메인 메뉴, 챕터 선택, 설정, 튜토리얼, 실험실 01을 영어·한국어·중국어로 캡처한 화면" width="100%"></p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/screens/menu-ko.png" alt="한국어 메인 메뉴"></td>
+    <td width="50%"><img src="docs/images/screens/lab01-ko.png" alt="한국어로 표시된 실험실 01의 HUD와 노바"></td>
+  </tr>
+  <tr>
+    <td align="center">메인 메뉴 · 한국어</td>
+    <td align="center">실험실 01 · 한국어</td>
+  </tr>
+</table>
+
 ## 🚀 빠른 시작
 
 1. Unity Hub로 **Unity 6000.6.8f1**을 설치합니다(다른 버전은 프로젝트 업그레이드를 요구합니다).
@@ -150,7 +167,7 @@ docs/                 2개 언어 문서(en/, ko/), 용어집, 이미지
 
 - **XR 로더 없음** — OpenXR / XR Management가 설치되어 있지 않아 데스크톱 미리보기로만 실행됩니다.
 - **Windows 경로 길이** — 프로젝트 폴더가 너무 깊으면 일부 에디터 창(Input Actions 편집기, Render Pipeline Converter)이 오류를 냅니다. 짧은 경로를 사용하세요.
-- **오래된 테스트 1개** — `DoorLabelsDescribeLockedOpeningReadyPausedAndResetStates`가 예전 출구 문 문구를 기대하고 있습니다.
+- **기존 테스트 실패** — EditMode 172/195, PlayMode 19/61 통과. 실패한 테스트는 모두 처음 가져온 원본에서도 똑같이 실패합니다(현지화 전후로 두 테스트 묶음을 모두 실행해 확인). [개발 계획](docs/ko/dev-plan.md)의 T12, T19를 참고하세요.
 - **Unity Cloud 연결** — 프로젝트가 아직 원작자의 Unity Cloud 프로젝트에 연결되어 있어 시작할 때 무해한 403 오류가 기록됩니다.
 - VR 이동 중 **편의용 비네트**가 아직 없습니다.
 - Hierarchy의 오브젝트 이름은 스크립트가 이름으로 찾기 때문에 일부러 중국어로 두었습니다. [용어집](docs/glossary.md)을 참고하세요.
