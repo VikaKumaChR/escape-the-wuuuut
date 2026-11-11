@@ -42,7 +42,7 @@ gantt
 | ID | 작업 | 영역 | 우선순위 | 스프린트 | 완료 기준 |
 |---|---|---|---|---|---|
 | T01 | `strings.csv` 한국어 열 원어민 검토 | 현지화 | P0 | 0 | 검토자 승인, 수정 사항 반영 |
-| T02 | 영어·한국어로 4개 실험실 모두 플레이, 넘치는 텍스트 캡처 | QA | P0 | 0 | Notion에 이슈 목록 등록 |
+| T02 | 영어·한국어로 4개 실험실 모두 플레이, 넘치는 텍스트 캡처(*Capture UI Screenshots*가 메뉴 화면을 자동 캡처) | QA | P0 | 0 | Notion에 이슈 목록 등록 |
 | T03 | 역할, 회의 주기, 리뷰 방식 합의 | 팀 | P1 | 0 | Notion에 역할 기입 |
 | T04 | 프로젝트를 짧은 경로(예: `E:\VAMR\Midterm-VAMR`)로 옮기거나 Windows 긴 경로 지원 켜기 | 개발 환경 | P0 | 1 | `Editor.log`에 "Could not find a part of the path" 오류 없음 |
 | T05 | 예전 Unity Cloud 프로젝트 연결 해제(로그의 403) 또는 팀 조직에 연결 | 개발 환경 | P2 | 1 | 시작 시 Unity Connect 403 없음 |

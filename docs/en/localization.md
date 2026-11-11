@@ -48,6 +48,11 @@ An empty `ko` cell falls back to English; an empty `en` cell falls back to the C
 - **In a scene/prefab label:** type the source text into the TextMeshPro component and add the matching row. Nothing else is needed.
 - Use **Tools › Distorted Space › Localization › Report Untranslated Scene Text** to list every Chinese label in the open scene that has no row yet.
 
+## Reviewing translations in context
+
+**Tools › Distorted Space › Localization › Capture UI Screenshots (EN · KO · ZH)** plays the main scene and saves 15 screenshots to `docs/images/screens/`: the main menu, chapter select, settings, tutorial and Lab 01, each in English, Korean and Chinese.
+Use them to spot clipped or overflowing text without playing through the game. From the command line: `Unity.exe -projectPath <project> -executeMethod DepthLab.Editor.DepthLabLanguageScreenshots.CaptureAndQuit`.
+
 ## What is intentionally *not* translated
 
 | Item | Why |
@@ -66,5 +71,6 @@ An empty `ko` cell falls back to English; an empty `en` cell falls back to the C
 | `Assets/Localization/Resources/DistortedSpaceLocalization.asset` | The settings instance (loaded with `Resources.Load`) |
 | `Assets/Localization/Data/strings.csv` | The string table |
 | `Assets/Localization/Editor/LocalizationMenu.cs` | *Tools › Distorted Space* menu |
+| `Assets/DepthLab/Editor/DepthLabLanguageScreenshots.cs` | Screenshots of the main screens in all three languages |
 
 The DepthLab edit-mode tests force Chinese in `DepthLabPlayerPrefsFixture`, so their existing Chinese assertions keep working without touching the player's saved language.

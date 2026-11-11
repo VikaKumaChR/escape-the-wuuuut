@@ -1,7 +1,19 @@
 {
     "name": "DepthLab.Editor",
     "rootNamespace": "DepthLab.Editor",
-    "references": ["DepthLab.Runtime", "Unity.TextMeshPro", "Unity.TextMeshPro.Editor", "UnityEngine.UI", "Unity.InputSystem", "Unity.XR.Interaction.Toolkit", "Unity.XR.CoreUtils", "TwistedSpace.Runtime"],
-    "includePlatforms": ["Editor"],
+    "references": [
+        "DepthLab.Runtime",
+        "Unity.TextMeshPro",
+        "Unity.TextMeshPro.Editor",
+        "UnityEngine.UI",
+        "Unity.InputSystem",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "TwistedSpace.Runtime",
+        "DistortedSpace.Localization"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "autoReferenced": true
 }

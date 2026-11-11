@@ -42,7 +42,7 @@ gantt
 | ID | Task | Area | Priority | Sprint | Done when |
 |---|---|---|---|---|---|
 | T01 | Native review of the Korean column in `strings.csv` | Localization | P0 | 0 | Reviewer signs off; fixes merged |
-| T02 | Play all 4 labs in EN and KO; screenshot any overflowing text | QA | P0 | 0 | Issue list posted in Notion |
+| T02 | Play all 4 labs in EN and KO; screenshot any overflowing text (*Capture UI Screenshots* covers the menus automatically) | QA | P0 | 0 | Issue list posted in Notion |
 | T03 | Agree on roles, meeting cadence and review flow | Team | P1 | 0 | Roles filled in Notion |
 | T04 | Move the project to a short path (e.g. `E:\VAMR\Midterm-VAMR`) or enable Windows long paths | Tooling | P0 | 1 | No "Could not find a part of the path" errors in `Editor.log` |
 | T05 | Unlink the old Unity Cloud project (403 in the log) or link it to the team's org | Tooling | P2 | 1 | No Unity Connect 403 on startup |

@@ -48,6 +48,11 @@ flowchart LR
 - **씬/프리팹 라벨에서:** TextMeshPro 컴포넌트에 원문을 입력하고 같은 키의 행을 추가하면 끝입니다.
 - **Tools › Distorted Space › Localization › Report Untranslated Scene Text**를 실행하면, 열려 있는 씬에서 아직 행이 없는 중국어 라벨을 모두 보여 줍니다.
 
+## 화면에서 번역 검토하기
+
+**Tools › Distorted Space › Localization › Capture UI Screenshots (EN · KO · ZH)**를 실행하면 메인 씬을 플레이하면서 메인 메뉴, 챕터 선택, 설정, 튜토리얼, 실험실 01 화면을 영어·한국어·중국어로 각각 찍어 `docs/images/screens/`에 스크린샷 15장을 저장합니다.
+게임을 끝까지 플레이하지 않아도 잘리거나 넘치는 텍스트를 찾을 수 있습니다. 명령줄에서는 `Unity.exe -projectPath <프로젝트> -executeMethod DepthLab.Editor.DepthLabLanguageScreenshots.CaptureAndQuit`로 실행합니다.
+
 ## 의도적으로 번역하지 *않은* 것
 
 | 항목 | 이유 |
@@ -66,5 +71,6 @@ flowchart LR
 | `Assets/Localization/Resources/DistortedSpaceLocalization.asset` | 설정 인스턴스(`Resources.Load`로 로드) |
 | `Assets/Localization/Data/strings.csv` | 문자열 표 |
 | `Assets/Localization/Editor/LocalizationMenu.cs` | *Tools › Distorted Space* 메뉴 |
+| `Assets/DepthLab/Editor/DepthLabLanguageScreenshots.cs` | 주요 화면을 세 언어로 캡처 |
 
 DepthLab 에디트 모드 테스트는 `DepthLabPlayerPrefsFixture`에서 언어를 중국어로 고정합니다. 그래서 기존의 중국어 검증이 그대로 동작하며, 플레이어가 저장한 언어 설정은 건드리지 않습니다.
